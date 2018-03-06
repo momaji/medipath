@@ -45,15 +45,15 @@ public class ProviderDataObject implements Comparable<Object> {
 		return this.ProviderName + ", " + this.ProviderZip;
 	}
 
-	public int getAMP() {
+	public double getAMP() {
 		return AMP;
 	}
 
-	public int getATP() {
+	public double getATP() {
 		return ATP;
 	}
 
-	public int getACC() {
+	public double getACC() {
 		return ACC;
 	}
 
