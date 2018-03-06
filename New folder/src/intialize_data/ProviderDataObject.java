@@ -1,6 +1,7 @@
 package intialize_data;
 
 public class ProviderDataObject implements Comparable {
+	private final String DRGDef;
 	private final String ProviderName;
 	private final String ProviderAddress;
 	private final String ProviderCity;
@@ -12,9 +13,10 @@ public class ProviderDataObject implements Comparable {
 	private final int ATP;
 	private final int AMP;
 	
-	public ProviderDataObject(String ProviderName, String ProviderAddress, 
+	public ProviderDataObject(String DRGDef, String ProviderName, String ProviderAddress, 
 			String ProviderCity, String ProviderState, Integer ProviderZip, String HospitalRRD, 
 			Integer TotalDischarges, Integer ACC, Integer ATP, Integer AMP){
+		this.DRGDef = DRGDef;
 		this.ProviderName = ProviderName;
 		this.ProviderAddress = ProviderAddress;
 		this.ProviderCity = ProviderCity;
@@ -34,6 +36,12 @@ public class ProviderDataObject implements Comparable {
 	}
 	
 	private boolean less(ProviderDataObject a, ProviderDataObject b) {
-		return (a.ProviderZip > b.ProviderZip);
+		return (a.ProviderZip < b.ProviderZip);
+	}
+	
+	@Override
+	public String toString() {
+		return this.ProviderName + ", " + this.ProviderZip;
+		
 	}
 }

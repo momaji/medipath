@@ -96,13 +96,16 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 	}
 	
 	public static void main(String[] args) {
-		ProviderDataObject a = new ProviderDataObject("aa", "aa", "aa", "aa", 5, "aa", 4, 3, 2, 1);
-		ProviderDataObject b = new ProviderDataObject("aa", "aa", "aa", "aa", 6, "aa", 4, 3, 2, 1);
+		ProviderDataObject a = new ProviderDataObject("aa","aa", "aa", "aa", "aa", 5, "aa", 4, 3, 2, 1);
+		ProviderDataObject b = new ProviderDataObject("aa","aa", "aa", "aa", "aa", 6, "aa", 4, 3, 2, 1);
+		ProviderDataObject c = new ProviderDataObject("aa","aa", "aa", "aa", "aa", 7, "aa", 4, 3, 2, 1);
+		ProviderDataObject d = new ProviderDataObject("aa","aa", "aa", "aa", "aa", 8, "aa", 4, 3, 2, 1);
 		RedBlackBST tree = new RedBlackBST();
 		tree.put(a, 31);
 		tree.put(b, 32);
-		
-		System.out.println(tree.get(b));
+		tree.put(c, 33);
+		tree.put(d, 34);
+		tree.print(tree.root);
 		
 	}
 	
@@ -120,6 +123,14 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 		if(cmplo < 0) keys(x.left, queue, lo, hi);
 		if(cmplo <= 0 && cmphi >= 0) queue.add(x.key);
 		if(cmplo > 0) keys(x.right, queue, lo, hi);
+		
+	}
+	
+	private void print(Node x) {
+		if(x == null) return;
+		print(x.left);
+		System.out.println(x.key);
+		print(x.right);
 		
 	}
 }
