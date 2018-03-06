@@ -2,6 +2,8 @@ package data_mangement;
 
 import java.util.Stack;
 
+///BST MAY BE COMPLETELY UNNESSESCARY IF RANGES CAN REPLACE IT
+
 public class RedBlackBST<Key extends Comparable<Key>, Value>{
 	private static final boolean RED = true;
 	private static final boolean BLACK = false;

@@ -112,5 +112,13 @@ public class BSTHashServices {
 		}
 		return (Iterable<Object>) zips;
 	}
+	
+	public Iterable<Object> getZips(int lo, int hi) {
+		Stack<Object> zips = new Stack<Object>();
+		for(int i = lo; i < hi; i++) {
+			zips.add(table.get(i));
+		}
+		return (Iterable<Object>) zips;
+	}
 
 }

@@ -12,7 +12,7 @@ import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
 public class ReadExcel {
-	
+
 	static final RedBlackBST<Integer, ProviderDataObject> tree = new RedBlackBST<Integer, ProviderDataObject>();
 	static final SeperateChainingHash<Integer, ProviderDataObject> table = new SeperateChainingHash<Integer, ProviderDataObject>();
 	static BSTHashServices combine = new BSTHashServices();
@@ -73,15 +73,37 @@ public class ReadExcel {
 	}
 
 	public static void main(String[] args) throws IOException {
+		long startTime1, startTime2;
+		long endTime1, endTime2;
+		long duration1, duration2;
+		boolean keysFaster;
+
+		int lo = 1040;
+		int hi = lo+120;
+
 		ReadExcel test = new ReadExcel();
 		test.setInputFile("medipath.xls");
 		test.read();
 
-		//tree.printVal(tree.getRoot()); //prints tree in order
-		Stack<Object> marm = (Stack<Object>) combine.getZips(tree.keys(0, 2000));
-		//BSTHashServices.printIterable(tree,table);
-		//combine.printSeperate(1040,9999);
-		while (!marm.isEmpty())
-			System.out.println(marm.pop());
+		startTime1 = System.nanoTime();
+		Stack<Object> marm = (Stack<Object>) combine.getZips(tree.keys(lo, hi)); // best to use when range is larger
+																					// than ~120
+		endTime1 = System.nanoTime();
+
+		startTime2 = System.nanoTime();
+		Stack<Object> alade = (Stack<Object>) combine.getZips(lo, hi); // use in small ranges
+		endTime2 = System.nanoTime();
+
+		duration1 = (endTime1 - startTime1);
+		duration2 = (endTime2 - startTime2);
+
+		keysFaster = (duration1 < duration2);
+		System.out.println(keysFaster);
+		
+		// tree.printVal(tree.getRoot()); //prints tree in order
+		// combine.printSeperate(1040,9999);
+
+		// while (!marm.isEmpty())
+		// System.out.println(table.get((Integer) marm.pop()));
 	}
 }
