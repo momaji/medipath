@@ -72,7 +72,7 @@ public class ReadExcel {
 		combine = new BSTHashServices(tree, table);
 	}
 
-	public static void main(String[] args) throws IOException {
+	/*public static void main(String[] args) throws IOException {
 		long startTime1, startTime2;
 		long endTime1, endTime2;
 		long duration1, duration2;
@@ -105,5 +105,5 @@ public class ReadExcel {
 
 		// while (!marm.isEmpty())
 		// System.out.println(table.get((Integer) marm.pop()));
-	}
+	}*/
 }
