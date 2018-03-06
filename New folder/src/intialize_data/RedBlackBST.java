@@ -106,7 +106,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 		tree.put(c.getProviderZip(), c);
 		tree.put(d.getProviderZip(), d);
 		tree.put(e.getProviderZip(), e);
-		tree.print(tree.root);
+		tree.printVal(tree.root);
 		PriorityQueue aa = new PriorityQueue();
 		aa = (PriorityQueue) tree.keys(a.getProviderZip(), e.getProviderZip());
 		System.out.println(aa.contains(e));
@@ -134,5 +134,12 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 		print(x.left);
 		System.out.println(x.key);
 		print(x.right);
+	}
+	
+	private void printVal(Node x) {
+		if(x == null) return;
+		printVal(x.left);
+		System.out.println(x.val);
+		printVal(x.right);
 	}
 }
