@@ -101,15 +101,15 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 		ProviderDataObject d = new ProviderDataObject("aa","aa", "aa", "aa", "aa", 8, "aa", 4, 3, 2, 1);
 		ProviderDataObject e = new ProviderDataObject("aa","aa", "aa", "aa", "aa", 900, "aa", 4, 3, 2, 1);
 		RedBlackBST tree = new RedBlackBST();
-		tree.put(a, 31);
-		tree.put(b, 32);
-		tree.put(c, 33);
-		tree.put(d, 34);
-		tree.put(e, 35);
+		tree.put(a.getProviderZip(), a);
+		tree.put(b.getProviderZip(), b);
+		tree.put(c.getProviderZip(), c);
+		tree.put(d.getProviderZip(), d);
+		tree.put(e.getProviderZip(), e);
 		tree.print(tree.root);
 		PriorityQueue aa = new PriorityQueue();
-		aa = (PriorityQueue) tree.keys(a, e);
-		System.out.println(aa.contains(d));
+		aa = (PriorityQueue) tree.keys(a.getProviderZip(), e.getProviderZip());
+		System.out.println(aa.contains(e));
 	}
 	
 	public Iterable<Key> keys(Key lo, Key hi){
