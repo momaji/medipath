@@ -29,17 +29,13 @@ public class ProviderDataObject implements Comparable<Object> {
 		this.AMP = AMP;
 	}	
 	
-	@Override
 	public int compareTo(Object a) {
-		if(less(this,(ProviderDataObject) a)) return -1;
+		if(less(this, (ProviderDataObject) a)) return -1;
 		else if(less((ProviderDataObject) a,this)) return 1;
 		else return 0;
 	}
-	
+
 	private boolean less(ProviderDataObject a, ProviderDataObject b) {
-		if(a.ProviderZip == b.ProviderZip) {
-			return(a.ACC < b.ACC);
-		}
 		return (a.ProviderZip < b.ProviderZip);
 	}
 	
@@ -82,5 +78,9 @@ public class ProviderDataObject implements Comparable<Object> {
 
 	public String getDRGDef() {
 		return DRGDef;
+	}
+	
+	public int getProviderZip() {
+		return this.ProviderZip;
 	}
 }
