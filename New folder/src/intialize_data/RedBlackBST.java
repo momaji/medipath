@@ -100,22 +100,26 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 		ProviderDataObject b = new ProviderDataObject("aa","aa", "aa", "aa", "aa", 6, "aa", 4, 3, 2, 1);
 		ProviderDataObject c = new ProviderDataObject("aa","aa", "aa", "aa", "aa", 7, "aa", 4, 3, 2, 1);
 		ProviderDataObject d = new ProviderDataObject("aa","aa", "aa", "aa", "aa", 8, "aa", 4, 3, 2, 1);
+		ProviderDataObject e = new ProviderDataObject("aa","aa", "aa", "aa", "aa", 900, "aa", 4, 3, 2, 1);
 		RedBlackBST tree = new RedBlackBST();
 		tree.put(a, 31);
 		tree.put(b, 32);
 		tree.put(c, 33);
 		tree.put(d, 34);
+		tree.put(e, 35);
 		tree.print(tree.root);
-		
+		PriorityQueue aa = new PriorityQueue();
+		aa = (PriorityQueue) tree.keys(a, e);
+		System.out.println(aa.contains(d));
 	}
 	
 	public Iterable<Key> keys(Key lo, Key hi){
-		Queue<Key> queue = new PriorityQueue<Key>();
+		PriorityQueue<Key> queue = new PriorityQueue<Key>();
 		keys(root, queue, lo, hi);
 		return queue;
 	}
 	
-	private void keys(Node x, Queue<Key> queue, Key lo, Key hi) {
+	private void keys(Node x, PriorityQueue<Key> queue, Key lo, Key hi) {
 		if(x == null) return;
 		int cmplo = lo.compareTo(x.key);
 		int cmphi = hi.compareTo(x.key);
@@ -131,6 +135,5 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 		print(x.left);
 		System.out.println(x.key);
 		print(x.right);
-		
 	}
 }

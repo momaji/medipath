@@ -14,8 +14,8 @@ public class ProviderDataObject implements Comparable {
 	private final int AMP;
 	
 	public ProviderDataObject(String DRGDef, String ProviderName, String ProviderAddress, 
-			String ProviderCity, String ProviderState, Integer ProviderZip, String HospitalRRD, 
-			Integer TotalDischarges, Integer ACC, Integer ATP, Integer AMP){
+			String ProviderCity, String ProviderState, int ProviderZip, String HospitalRRD, 
+			int TotalDischarges, int ACC, int ATP, int AMP){
 		this.DRGDef = DRGDef;
 		this.ProviderName = ProviderName;
 		this.ProviderAddress = ProviderAddress;
@@ -28,6 +28,7 @@ public class ProviderDataObject implements Comparable {
 		this.ATP = ATP;
 		this.AMP = AMP;
 	}	
+	
 	@Override
 	public int compareTo(Object a) {
 		if(less(this ,(ProviderDataObject) a)) return -1;
@@ -42,6 +43,41 @@ public class ProviderDataObject implements Comparable {
 	@Override
 	public String toString() {
 		return this.ProviderName + ", " + this.ProviderZip;
-		
+	}
+
+	public int getAMP() {
+		return AMP;
+	}
+
+	public int getATP() {
+		return ATP;
+	}
+
+	public int getACC() {
+		return ACC;
+	}
+
+	public int getTotalDischarges() {
+		return TotalDischarges;
+	}
+
+	public String getHospitalRRD() {
+		return HospitalRRD;
+	}
+
+	public String getProviderState() {
+		return ProviderState;
+	}
+
+	public String getProviderCity() {
+		return ProviderCity;
+	}
+
+	public String getProviderAddress() {
+		return ProviderAddress;
+	}
+
+	public String getDRGDef() {
+		return DRGDef;
 	}
 }
