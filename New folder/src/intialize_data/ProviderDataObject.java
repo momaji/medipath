@@ -1,6 +1,6 @@
 package intialize_data;
 
-public class ProviderDataObject implements Comparable {
+public class ProviderDataObject implements Comparable<Object> {
 	private final String DRGDef;
 	private final String ProviderName;
 	private final String ProviderAddress;
@@ -9,13 +9,13 @@ public class ProviderDataObject implements Comparable {
 	private final int ProviderZip;
 	private final String HospitalRRD; //Hospital Referral Region Description
 	private final int TotalDischarges;
-	private final int ACC;
-	private final int ATP;
-	private final int AMP;
+	private final double ACC;
+	private final double ATP;
+	private final double AMP;
 	
 	public ProviderDataObject(String DRGDef, String ProviderName, String ProviderAddress, 
 			String ProviderCity, String ProviderState, int ProviderZip, String HospitalRRD, 
-			int TotalDischarges, int ACC, int ATP, int AMP){
+			int TotalDischarges, double ACC, double ATP, double AMP){
 		this.DRGDef = DRGDef;
 		this.ProviderName = ProviderName;
 		this.ProviderAddress = ProviderAddress;
