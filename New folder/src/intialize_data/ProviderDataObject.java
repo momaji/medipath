@@ -1,6 +1,6 @@
 package intialize_data;
 
-public class ProviderDataObject {
+public class ProviderDataObject implements Comparable {
 	private final String ProviderName;
 	private final String ProviderAddress;
 	private final String ProviderCity;
@@ -26,14 +26,14 @@ public class ProviderDataObject {
 		this.ATP = ATP;
 		this.AMP = AMP;
 	}	
-	
-	public int compareTo(ProviderDataObject a) {
-		if(less(this.ProviderZip, a.ProviderZip)) return -1;
-		else if(less(a.ProviderZip,this.ProviderZip)) return 1;
+	@Override
+	public int compareTo(Object a) {
+		if(less(this ,(ProviderDataObject) a)) return -1;
+		else if(less((ProviderDataObject) a,this)) return 1;
 		else return 0;
 	}
 	
-	private boolean less(int a, int b) {
-		return (a < b);
+	private boolean less(ProviderDataObject a, ProviderDataObject b) {
+		return (a.ProviderZip > b.ProviderZip);
 	}
 }

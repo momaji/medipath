@@ -15,7 +15,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 		int n;
 		boolean colour;
 		
-		Node(Key key, Value val, int n, boolean color){
+		Node(Key key, Value val, int n, boolean colour){
 			this.key = key;
 			this.val = val;
 			this.n = n;
@@ -98,8 +98,12 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 	public static void main(String[] args) {
 		ProviderDataObject a = new ProviderDataObject("aa", "aa", "aa", "aa", 5, "aa", 4, 3, 2, 1);
 		ProviderDataObject b = new ProviderDataObject("aa", "aa", "aa", "aa", 6, "aa", 4, 3, 2, 1);
+		RedBlackBST tree = new RedBlackBST();
+		tree.put(a, 31);
+		tree.put(b, 32);
 		
-		System.out.println(a.compareTo(b));
+		System.out.println(tree.get(b));
+		
 	}
 	
 	public Iterable<Key> keys(Key lo, Key hi){
