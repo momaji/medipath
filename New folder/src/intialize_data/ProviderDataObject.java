@@ -25,7 +25,15 @@ public class ProviderDataObject {
 		this.ACC = ACC;
 		this.ATP = ATP;
 		this.AMP = AMP;
+	}	
+	
+	public int compareTo(ProviderDataObject a) {
+		if(less(this.ProviderZip, a.ProviderZip)) return -1;
+		else if(less(a.ProviderZip,this.ProviderZip)) return 1;
+		else return 0;
 	}
 	
-	
+	private boolean less(int a, int b) {
+		return (a < b);
+	}
 }

@@ -1,5 +1,8 @@
 package intialize_data;
 
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 public class RedBlackBST<Key extends Comparable<Key>, Value>{
 	private static final boolean RED = true;
 	private static final boolean BLACK = false;
@@ -47,10 +50,72 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 		return x;	
 	}
 	
-	void flipColours(Node h) {
+	private void flipColours(Node h) {
 		h.colour = RED;
 		h.left.colour = BLACK;
 		h.right.colour = BLACK;
 	}
 	
+	public int size() {return size(root);}
+	
+	private int size(Node x) {
+		if(x == null) return 0;
+		else return x.n;
+	}
+	
+	public void put(Key key, Value val) {
+		root = put(root, key, val);
+		root.colour = BLACK;
+	}
+	
+	private Node put(Node h, Key key, Value val) {
+		if(h == null) return new Node(key, val, 1, RED);
+		int cmp = key.compareTo(h.key);
+		if(cmp < 0) h.left = put(h.left, key, val);
+		if(cmp > 0) h.right = put(h.right, key, val);
+		else h.val = val;
+		
+		if(isRed(h.right) && !isRed(h.left)) h = rotateLeft(h);
+		if(isRed(h.left) && isRed(h.left.left)) h = rotateRight(h);
+		if(isRed(h.right) && isRed(h.left)) flipColours(h);
+		
+		h.n = 1 + size(h.right) + size(h.left);
+		return h;
+	}
+	
+	public Value get(Key key) {
+		return get(root, key);
+	}
+	
+	private Value get(Node x, Key key) {
+		if(x == null) return null;
+		int cmp = key.compareTo(x.key);
+		if(cmp < 0) return get(x.left, key);
+		if(cmp > 0) return get(x.right, key);
+		else return x.val;
+	}
+	
+	public static void main(String[] args) {
+		ProviderDataObject a = new ProviderDataObject("aa", "aa", "aa", "aa", 5, "aa", 4, 3, 2, 1);
+		ProviderDataObject b = new ProviderDataObject("aa", "aa", "aa", "aa", 6, "aa", 4, 3, 2, 1);
+		
+		System.out.println(a.compareTo(b));
+	}
+	
+	public Iterable<Key> keys(Key lo, Key hi){
+		Queue<Key> queue = new PriorityQueue<Key>();
+		keys(root, queue, lo, hi);
+		return queue;
+	}
+	
+	private void keys(Node x, Queue<Key> queue, Key lo, Key hi) {
+		if(x == null) return;
+		int cmplo = lo.compareTo(x.key);
+		int cmphi = hi.compareTo(x.key);
+		
+		if(cmplo < 0) keys(x.left, queue, lo, hi);
+		if(cmplo <= 0 && cmphi >= 0) queue.add(x.key);
+		if(cmplo > 0) keys(x.right, queue, lo, hi);
+		
+	}
 }
