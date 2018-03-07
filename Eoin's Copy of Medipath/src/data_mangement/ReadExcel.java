@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.PriorityQueue;
-import java.util.Stack;
 //import java.util.Stack;
 import java.util.Vector;
 
@@ -30,7 +29,7 @@ public class ReadExcel {
 	private static Double parse(String string) {
 		return Double.parseDouble((string).substring(1).replace(",", ""));
 	}
-	
+
 	private static void begin() throws IOException {
 		ReadExcel test = new ReadExcel();
 		test.setInputFile("medipath.xls");
@@ -84,35 +83,32 @@ public class ReadExcel {
 		combine = new BSTHashServices(tree, table);
 	}
 
-	public static void main(String[] args) throws IOException{
-		int i, size = 0;
-		double average = 0;
-		Stack<Long> times = new Stack<Long>();
-		
+	public static void main(String[] args) throws IOException {
+
 		begin();
 
-		/*for (i = 0; i < 20; i++) {
-			System.out.println("timing");
-			long start = System.nanoTime();
-			long end = System.nanoTime();
-			times.push(((end - start) / (1000000000)));
-		}
+		/*
+		 * int i, size = 0; double average = 0; Stack<Long> times = new Stack<Long>();
+		 * for (i = 0; i < 20; i++) { 
+		 * System.out.println("timing"); 
+		 * long start = System.nanoTime();
+		 * long end = System.nanoTime(); 
+		 * times.push(((end - start) / (1000000000))); }
+		 * 
+		 * size = times.size(); System.out.println("pop"); 
+		 * while (!times.empty()) {average += times.pop(); } 
+		 * System.out.println(average /= size);
+		 */
 
-		size = times.size();
-		System.out.println("pop");
-		while (!times.empty()) {
-			average += times.pop();
-		}
-		System.out.println(average /= size);*/
-
-		Stack<Object> allkeys = new Stack<Object>();
-		allkeys = (Stack<Object>) combine.tree.keys();
-		while (!allkeys.isEmpty()) {
-			Iterator<Object> m = (combine.table.get((Integer) allkeys.pop())).iterator();
-			while (m.hasNext()) {
-				Object element = m.next(); // System.out.println(element);
-			}
-		}
+		/*
+		 * Stack<Object> allkeys = new Stack<Object>(); allkeys = (Stack<Object>)
+		 * combine.tree.keys(); while (!allkeys.isEmpty()) { Iterator<Object> m =
+		 * (combine.table.get((Integer) allkeys.pop())).iterator(); 
+		 * while (m.hasNext()){
+		 * Object element = m.next(); 
+		 * // System.out.println(element); } 
+		 * }
+		 */
 
 		// best way to get cheapest objects in a range
 		Iterator<Object> all = tree.keys(1040, 5600).iterator(); // change keys to the range(int, int) or to an
@@ -144,14 +140,17 @@ public class ReadExcel {
 			objects++;
 			zips++;
 			itrZips.next();
-			itrObjects.next(); // System.out.println("ZIP: " + itrZips.next() + ", ACC + itrObjects.next());
-								// note these are unrelated info points.
+			itrObjects.next();
+			// System.out.println("ZIP: " + itrZips.next() + ", ACC + itrObjects.next());
+			// note these are unrelated info points.
 		}
+
 		while (itrObjects.hasNext()) {
 			objects++;
 			itrObjects.next();
 			// System.out.println("ZIPs: complete, ACC: "+ itrObjects.next());
 		}
+
 		System.out.println("");
 		System.out.println("#Total Zip Codes: " + zips + ", #Total ProviderDataObjects: " + objects);
 		System.out.println("#Total Zip Codes (from queue): " + allZips.size());
