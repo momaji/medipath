@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.PriorityQueue;
-import java.util.Stack;
+//import java.util.Stack;
 import java.util.Vector;
 
 import jxl.Cell;
@@ -82,30 +82,29 @@ public class ReadExcel {
 		test.setInputFile("medipath.xls");
 		test.read();
 		
-		Stack<Object> allkeys = new Stack<Object>();
+		/*Stack<Object> allkeys = new Stack<Object>();
 		allkeys = (Stack<Object>) combine.tree.keys();
-		
 		while(!allkeys.isEmpty()){
 			Iterator<Object> m = (combine.table.get((Integer) allkeys.pop())).iterator();
 			while (m.hasNext()) {
 				Object element = m.next();
-				System.out.println(element);
+				//System.out.println(element);
 			}
-		}
+		}*/
 
 		// best way to get cheapest objects in a range
-		Iterator<Object> all = tree.keys().iterator(); // change keys to the range(int, int) or to an
+		Iterator<Object> all = tree.keys(1040,5600).iterator(); // change keys to the range(int, int) or to an
 		while (all.hasNext()) {
-			//ProviderDataObject cheapest = combine.getCheapestObject((int) all.next());
-			//System.out.println(cheapest);
-			all.next();
+			ProviderDataObject cheapest = combine.getCheapestObject((int) all.next());
+			System.out.println(cheapest);
+			//all.next();
 		}
 
 		PriorityQueue<Object> allZips = (PriorityQueue<Object>)combine.getZips(tree.keys());
 		Vector<Object> allObjects = (Vector<Object>) combine.returnObjects(tree.keys());
 
 		while (true) {
-			System.out.println(allObjects.firstElement());
+			//System.out.println(allObjects.firstElement());
 			allObjects.removeElementAt(0);
 			if (allObjects.isEmpty()) {
 				break;
@@ -122,14 +121,18 @@ public class ReadExcel {
 		while (itrZips.hasNext()) {
 			objects++;
 			zips++;
-			System.out.println("ZIP: " + itrZips.next() + ", ACC: " + itrObjects.next()); //note these are unrelated info points.
+			itrZips.next();
+			itrObjects.next();
+			//System.out.println("ZIP: " + itrZips.next() + ", ACC: " + itrObjects.next()); //note these are unrelated info points.
 		}
 		while (itrObjects.hasNext()) {
 			objects++;
-			System.out.println("ZIPs: complete, ACC: "+ itrObjects.next());
+			itrObjects.next();
+			//System.out.println("ZIPs: complete, ACC: "+ itrObjects.next());
 		}
-		System.out.println("#zips: " + zips + ", #objects: " + objects);
-		System.out.println("#zip (from queue): " + allZips.size());
+		
+		System.out.println("#Total Zip Codes: " + zips + ", #Total ProviderDataObjects: " + objects);
+		System.out.println("#Total Zip Codes (from queue): " + allZips.size());
 		System.out.println(combine.getCheapestObject(1040));
 		System.out.println(combine.getObject(77504,60643.68));
 		
