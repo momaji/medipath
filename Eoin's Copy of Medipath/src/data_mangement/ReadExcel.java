@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.PriorityQueue;
+import java.util.Stack;
 //import java.util.Stack;
 import java.util.Vector;
 
@@ -18,7 +19,7 @@ public class ReadExcel {
 
 	private static final RedBlackBST<Integer, ProviderDataObject> tree = new RedBlackBST<Integer, ProviderDataObject>();
 	private static final SeperateChainingHash<Integer, ProviderDataObject> table = new SeperateChainingHash<Integer, ProviderDataObject>();
-	private static BSTHashServices combine = new BSTHashServices();
+	public static BSTHashServices combine = new BSTHashServices();
 
 	private String inputFile;
 
@@ -28,6 +29,12 @@ public class ReadExcel {
 
 	private static Double parse(String string) {
 		return Double.parseDouble((string).substring(1).replace(",", ""));
+	}
+	
+	private static void begin() throws IOException {
+		ReadExcel test = new ReadExcel();
+		test.setInputFile("medipath.xls");
+		test.read();
 	}
 
 	public void read() throws IOException {
@@ -77,34 +84,49 @@ public class ReadExcel {
 		combine = new BSTHashServices(tree, table);
 	}
 
-	public static void main(String[] args) throws IOException {
-		ReadExcel test = new ReadExcel();
-		test.setInputFile("medipath.xls");
-		test.read();
+	public static void main(String[] args) throws IOException{
+		int i, size = 0;
+		double average = 0;
+		Stack<Long> times = new Stack<Long>();
 		
-		/*Stack<Object> allkeys = new Stack<Object>();
+		begin();
+
+		/*for (i = 0; i < 20; i++) {
+			System.out.println("timing");
+			long start = System.nanoTime();
+			long end = System.nanoTime();
+			times.push(((end - start) / (1000000000)));
+		}
+
+		size = times.size();
+		System.out.println("pop");
+		while (!times.empty()) {
+			average += times.pop();
+		}
+		System.out.println(average /= size);*/
+
+		Stack<Object> allkeys = new Stack<Object>();
 		allkeys = (Stack<Object>) combine.tree.keys();
-		while(!allkeys.isEmpty()){
+		while (!allkeys.isEmpty()) {
 			Iterator<Object> m = (combine.table.get((Integer) allkeys.pop())).iterator();
 			while (m.hasNext()) {
-				Object element = m.next();
-				//System.out.println(element);
+				Object element = m.next(); // System.out.println(element);
 			}
-		}*/
+		}
 
 		// best way to get cheapest objects in a range
-		Iterator<Object> all = tree.keys(1040,5600).iterator(); // change keys to the range(int, int) or to an
+		Iterator<Object> all = tree.keys(1040, 5600).iterator(); // change keys to the range(int, int) or to an
 		while (all.hasNext()) {
 			ProviderDataObject cheapest = combine.getCheapestObject((int) all.next());
 			System.out.println(cheapest);
-			//all.next();
+			// all.next();
 		}
 
-		PriorityQueue<Object> allZips = (PriorityQueue<Object>)combine.getZips(tree.keys());
+		PriorityQueue<Object> allZips = (PriorityQueue<Object>) combine.getZips(tree.keys());
 		Vector<Object> allObjects = (Vector<Object>) combine.returnObjects(tree.keys());
 
 		while (true) {
-			//System.out.println(allObjects.firstElement());
+			// System.out.println(allObjects.firstElement());
 			allObjects.removeElementAt(0);
 			if (allObjects.isEmpty()) {
 				break;
@@ -122,19 +144,19 @@ public class ReadExcel {
 			objects++;
 			zips++;
 			itrZips.next();
-			itrObjects.next();
-			//System.out.println("ZIP: " + itrZips.next() + ", ACC: " + itrObjects.next()); //note these are unrelated info points.
+			itrObjects.next(); // System.out.println("ZIP: " + itrZips.next() + ", ACC + itrObjects.next());
+								// note these are unrelated info points.
 		}
 		while (itrObjects.hasNext()) {
 			objects++;
 			itrObjects.next();
-			//System.out.println("ZIPs: complete, ACC: "+ itrObjects.next());
+			// System.out.println("ZIPs: complete, ACC: "+ itrObjects.next());
 		}
-		
+		System.out.println("");
 		System.out.println("#Total Zip Codes: " + zips + ", #Total ProviderDataObjects: " + objects);
 		System.out.println("#Total Zip Codes (from queue): " + allZips.size());
+		System.out.println("");
 		System.out.println(combine.getCheapestObject(1040));
-		System.out.println(combine.getObject(77504,60643.68));
-		
+		System.out.println(combine.getObject(77504, 60643.68));
 	}
 }
