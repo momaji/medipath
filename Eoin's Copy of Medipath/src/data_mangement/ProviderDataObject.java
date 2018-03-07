@@ -2,6 +2,7 @@ package data_mangement;
 
 public class ProviderDataObject implements Comparable<Object> {
 	private final String DRGDef;
+	private final int ProviderID;
 	private final String ProviderName;
 	private final String ProviderAddress;
 	private final String ProviderCity;
@@ -13,10 +14,11 @@ public class ProviderDataObject implements Comparable<Object> {
 	private final double ATP;
 	private final double AMP;
 	
-	public ProviderDataObject(String DRGDef, String ProviderName, String ProviderAddress, 
+	public ProviderDataObject(String DRGDef, int ProviderID, String ProviderName, String ProviderAddress, 
 			String ProviderCity, String ProviderState, int ProviderZip, String HospitalRRD, 
 			int TotalDischarges, double ACC, double ATP, double AMP){
 		this.DRGDef = DRGDef;
+		this.ProviderID = ProviderID;
 		this.ProviderName = ProviderName;
 		this.ProviderAddress = ProviderAddress;
 		this.ProviderCity = ProviderCity;
@@ -63,7 +65,15 @@ public class ProviderDataObject implements Comparable<Object> {
 	public int getTotalDischarges() {
 		return TotalDischarges;
 	}
-
+	
+	public int getProviderID() {
+		return this.ProviderID;
+	}
+	
+	public int getProviderZip() {
+		return this.ProviderZip;
+	}
+	
 	public String getHospitalRRD() {
 		return HospitalRRD;
 	}
@@ -83,8 +93,5 @@ public class ProviderDataObject implements Comparable<Object> {
 	public String getDRGDef() {
 		return DRGDef;
 	}
-	
-	public int getProviderZip() {
-		return this.ProviderZip;
-	}
+
 }

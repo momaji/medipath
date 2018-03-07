@@ -2,7 +2,7 @@ package data_mangement;
 
 import java.util.Stack;
 
-///BST MAY BE COMPLETELY UNNESSESCARY IF RANGES CAN REPLACE IT
+//BST MAY BE COMPLETELY UNNESSESCARY IF RANGES CAN REPLACE IT
 
 public class RedBlackBST<Key extends Comparable<Key>, Value>{
 	private static final boolean RED = true;
@@ -24,6 +24,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 		}
 		
 	}
+	
 	private boolean isRed(Node x) {
 			if(x==null) return false;
 			return x.colour == RED;
@@ -61,7 +62,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 	
 	private int size(Node x) {
 		if(x == null) return 0;
-		else return x.n;
+		return x.n;
 	}
 	
 	public void put(Key key, Value val) {
@@ -93,7 +94,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 		int cmp = key.compareTo(x.key);
 		if(cmp < 0) return get(x.left, key);
 		if(cmp > 0) return get(x.right, key);
-		else return x.val;
+		return x.val;
 	}
 	
 	/*public static void main(String[] args) {
@@ -130,6 +131,12 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 		return (Iterable<Object>) stack;
 	}
 	
+	public Iterable<Object> keys(){//returns a stack of keys
+		Stack<Object> stack = new Stack<Object>();
+		keys(root, stack);
+		return (Iterable<Object>) stack;
+	}
+	
 	private void keys(Node x, Stack<Object> stack, Key lo, Key hi) {//adds keys to created stack
 		if(x == null) return;
 		int cmplo = lo.compareTo(x.key);
@@ -138,6 +145,19 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 		if(cmplo < 0) keys(x.left, stack, lo, hi);
 		if(cmplo <= 0 && cmphi >= 0) stack.add(x.key);
 		if(cmphi > 0) keys(x.right, stack, lo, hi);
+		
+	}
+	
+	private void keys(Node x, Stack<Object> stack) {//adds keys to created stack
+		Integer lo = 0;
+		Integer hi = 1000000;
+		if(x == null) return;
+		int cmplo = lo.compareTo((Integer) x.key);
+		int cmphi = hi.compareTo((Integer) x.key);
+		
+		if(cmplo < 0) keys(x.left, stack);
+		if(cmplo <= 0 && cmphi >= 0) stack.add(x.key);
+		if(cmphi > 0) keys(x.right, stack);
 		
 	}
 	

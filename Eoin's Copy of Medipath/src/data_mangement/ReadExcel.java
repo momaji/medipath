@@ -4,6 +4,10 @@ package data_mangement;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.PriorityQueue;
+import java.util.Stack;
+import java.util.Vector;
 
 import jxl.Cell;
 import jxl.Sheet;
@@ -12,9 +16,9 @@ import jxl.read.biff.BiffException;
 
 public class ReadExcel {
 
-	static final RedBlackBST<Integer, ProviderDataObject> tree = new RedBlackBST<Integer, ProviderDataObject>();
-	static final SeperateChainingHash<Integer, ProviderDataObject> table = new SeperateChainingHash<Integer, ProviderDataObject>();
-	static BSTHashServices combine = new BSTHashServices();
+	private static final RedBlackBST<Integer, ProviderDataObject> tree = new RedBlackBST<Integer, ProviderDataObject>();
+	private static final SeperateChainingHash<Integer, ProviderDataObject> table = new SeperateChainingHash<Integer, ProviderDataObject>();
+	private static BSTHashServices combine = new BSTHashServices();
 
 	private String inputFile;
 
@@ -39,7 +43,7 @@ public class ReadExcel {
 			for (int j = 1; j < 65536; j++) {
 
 				Cell cell0 = sheet.getCell(0, j);
-				// Cell cell1 = sheet.getCell(1,j);
+				Cell cell1 = sheet.getCell(1, j);
 				Cell cell2 = sheet.getCell(2, j);
 				Cell cell3 = sheet.getCell(3, j);
 				Cell cell4 = sheet.getCell(4, j);
@@ -55,11 +59,13 @@ public class ReadExcel {
 				double cell9x = parse(cell9.getContents());
 				double cell10x = parse(cell10.getContents());
 				double cell11x = parse(cell11.getContents());
+				Integer cell1x = Integer.parseInt(cell1.getContents());
+				Integer cell6x = Integer.parseInt(cell6.getContents());
+				Integer cell8x = Integer.parseInt(cell8.getContents());
 
-				ProviderDataObject a = new ProviderDataObject(cell0.getContents(), cell2.getContents(),
-						cell3.getContents(), cell4.getContents(), cell5.getContents(),
-						Integer.parseInt(cell6.getContents()), cell7.getContents(),
-						Integer.parseInt(cell8.getContents()), cell9x, cell10x, cell11x);
+				ProviderDataObject a = new ProviderDataObject(cell0.getContents(), cell1x, cell2.getContents(),
+						cell3.getContents(), cell4.getContents(), cell5.getContents(), cell6x, cell7.getContents(),
+						cell8x, cell9x, cell10x, cell11x);
 
 				tree.put(a.getProviderZip(), a);
 				table.put(a.getProviderZip(), a);
@@ -71,38 +77,61 @@ public class ReadExcel {
 		combine = new BSTHashServices(tree, table);
 	}
 
-	/*public static void main(String[] args) throws IOException {
-		long startTime1, startTime2;
-		long endTime1, endTime2;
-		long duration1, duration2;
-		boolean keysFaster;
-
-		int lo = 1040;
-		int hi = lo+120;
-
+	public static void main(String[] args) throws IOException {
 		ReadExcel test = new ReadExcel();
 		test.setInputFile("medipath.xls");
 		test.read();
+		Vector<Object> vector = (Vector<Object>) combine.returnObjects(tree.keys());
 
-		startTime1 = System.nanoTime();
-		Stack<Object> marm = (Stack<Object>) combine.getZips(tree.keys(lo, hi)); // best to use when range is larger
-																					// than ~120
-		endTime1 = System.nanoTime();
+		// best way to get cheapest objects in a range(?)
 
-		startTime2 = System.nanoTime();
-		Stack<Object> alade = (Stack<Object>) combine.getZips(lo, hi); // use in small ranges
-		endTime2 = System.nanoTime();
+		Iterator<Object> all = tree.keys().iterator(); // change keys to the range(int, int) or to an
+		while (all.hasNext()) {
+			//ProviderDataObject cheapest = combine.getCheapestObject((int) all.next());
+			//System.out.println(cheapest);
+			all.next();
+		}
 
-		duration1 = (endTime1 - startTime1);
-		duration2 = (endTime2 - startTime2);
+		// worse version of above code (no iterator)
+		// while(!vector.isEmpty()) {
+		// ProviderDataObject queue = combine.getCheapestObject(((ProviderDataObject)
+		// ((PriorityQueue) vector.firstElement()).poll()).getProviderZip());
+		// System.out.println(queue);
+		// vector.remove(0);
+		// }
 
-		keysFaster = (duration1 < duration2);
-		System.out.println(keysFaster);
-		
-		// tree.printVal(tree.getRoot()); //prints tree in order
-		// combine.printSeperate(1040,9999);
+		// PriorityQueue<Object> queue =
+		// (PriorityQueue<Object>)combine.getZips(tree.keys());
 
-		// while (!marm.isEmpty())
-		// System.out.println(table.get((Integer) marm.pop()));
-	}*/
+		/*vector = (Vector<Object>) combine.returnObjects(tree.keys());
+
+		while (true) {
+			System.out.println(vector.firstElement());
+			vector.removeElementAt(0);
+			if (vector.isEmpty()) {
+				break;
+			}
+		}*/
+
+		// System.out.println(combine.getCheapestObject(1040));
+		// System.out.println(combine.getObject(77504,60643.68));
+		// combine.printIterable(1040,1040);
+		// System.out.println(combine.getACCs(tree.keys()));
+
+		/*Iterator<Object> itrObjects = (Iterator<Object>) combine.getACCs(tree.keys()).iterator();
+		Iterator<Object> itrZips = (Iterator<Object>) combine.getZips(tree.keys()).iterator();
+		int objects = 0;
+		int zips = 0;
+		while (itrZips.hasNext()) {
+			objects++;
+			zips++;
+			System.out.println("ZIP: " + itrZips.next() + ", ACC: " + itrObjects.next()); //note these are unrelated info points.
+		}
+		while (itrObjects.hasNext()) {
+			objects++;
+			System.out.println("ZIPs: complete, ACC: "+ itrObjects.next());
+		}
+		System.out.println("#zips: " + zips + ", #objects: " + objects);
+		*/
+	}
 }

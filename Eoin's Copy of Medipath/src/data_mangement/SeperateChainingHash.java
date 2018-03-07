@@ -1,16 +1,12 @@
 package data_mangement;
 
 public class SeperateChainingHash<Key, Value> {
-	private int m;
-	private SequentialSearchST<Key, Value>[] st;
+	private final int m = 2943;
 	
-	public SeperateChainingHash() {
-		this(2943);
-	}
+	private SequentialSearchST<Key, Value>[] st;
 
 	@SuppressWarnings("unchecked")
-	private SeperateChainingHash(int i) {
-		this.m = i;
+	public SeperateChainingHash() {
 		st = (SequentialSearchST<Key, Value>[]) new SequentialSearchST[m];
 		for(int k = 0; k < m; k++)
 			st[k] = new SequentialSearchST<Key, Value>();	

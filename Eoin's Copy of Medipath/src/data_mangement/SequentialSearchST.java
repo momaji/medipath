@@ -2,9 +2,9 @@ package data_mangement;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
-import java.util.Stack;
 
 public class SequentialSearchST<Key, Value> {
+	
 	private Node first;
 	
 	private class Node{
@@ -20,9 +20,9 @@ public class SequentialSearchST<Key, Value> {
 	}
 	
 	public Iterable<Object> get(Key key) {
-		Stack<Object> m = new Stack<Object>();
+		PriorityQueue<Object> m = new PriorityQueue<Object>();
 		for(Node x = first; x!= null; x = x.next) if(key.equals(x.key)) m.add(x.val);
-		return m;
+		return (Iterable<Object>) m;
 	}
 
 	public void put(Key key, Value val) {
