@@ -81,10 +81,19 @@ public class ReadExcel {
 		ReadExcel test = new ReadExcel();
 		test.setInputFile("medipath.xls");
 		test.read();
-		Vector<Object> vector = (Vector<Object>) combine.returnObjects(tree.keys());
+		
+		Stack<Object> allkeys = new Stack<Object>();
+		allkeys = (Stack<Object>) combine.tree.keys();
+		
+		while(!allkeys.isEmpty()){
+			Iterator<Object> m = (combine.table.get((Integer) allkeys.pop())).iterator();
+			while (m.hasNext()) {
+				Object element = m.next();
+				System.out.println(element);
+			}
+		}
 
-		// best way to get cheapest objects in a range(?)
-
+		// best way to get cheapest objects in a range
 		Iterator<Object> all = tree.keys().iterator(); // change keys to the range(int, int) or to an
 		while (all.hasNext()) {
 			//ProviderDataObject cheapest = combine.getCheapestObject((int) all.next());
@@ -92,33 +101,21 @@ public class ReadExcel {
 			all.next();
 		}
 
-		// worse version of above code (no iterator)
-		// while(!vector.isEmpty()) {
-		// ProviderDataObject queue = combine.getCheapestObject(((ProviderDataObject)
-		// ((PriorityQueue) vector.firstElement()).poll()).getProviderZip());
-		// System.out.println(queue);
-		// vector.remove(0);
-		// }
-
-		// PriorityQueue<Object> queue =
-		// (PriorityQueue<Object>)combine.getZips(tree.keys());
-
-		/*vector = (Vector<Object>) combine.returnObjects(tree.keys());
+		PriorityQueue<Object> allZips = (PriorityQueue<Object>)combine.getZips(tree.keys());
+		Vector<Object> allObjects = (Vector<Object>) combine.returnObjects(tree.keys());
 
 		while (true) {
-			System.out.println(vector.firstElement());
-			vector.removeElementAt(0);
-			if (vector.isEmpty()) {
+			System.out.println(allObjects.firstElement());
+			allObjects.removeElementAt(0);
+			if (allObjects.isEmpty()) {
 				break;
 			}
-		}*/
+		}
 
-		// System.out.println(combine.getCheapestObject(1040));
-		// System.out.println(combine.getObject(77504,60643.68));
 		// combine.printIterable(1040,1040);
 		// System.out.println(combine.getACCs(tree.keys()));
 
-		/*Iterator<Object> itrObjects = (Iterator<Object>) combine.getACCs(tree.keys()).iterator();
+		Iterator<Object> itrObjects = (Iterator<Object>) combine.getACCs(tree.keys()).iterator();
 		Iterator<Object> itrZips = (Iterator<Object>) combine.getZips(tree.keys()).iterator();
 		int objects = 0;
 		int zips = 0;
@@ -132,6 +129,9 @@ public class ReadExcel {
 			System.out.println("ZIPs: complete, ACC: "+ itrObjects.next());
 		}
 		System.out.println("#zips: " + zips + ", #objects: " + objects);
-		*/
+		System.out.println("#zip (from queue): " + allZips.size());
+		System.out.println(combine.getCheapestObject(1040));
+		System.out.println(combine.getObject(77504,60643.68));
+		
 	}
 }

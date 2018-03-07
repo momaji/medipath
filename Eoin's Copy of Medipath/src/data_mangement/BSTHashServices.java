@@ -25,7 +25,6 @@ public class BSTHashServices {
 	public void printSeperate() {
 		Stack<Object> allkeys = new Stack<Object>();
 		allkeys = (Stack<Object>) this.tree.keys();
-
 		
 		while(!allkeys.isEmpty()){
 			Iterator<Object> m = (this.table.get((Integer) allkeys.pop())).iterator();

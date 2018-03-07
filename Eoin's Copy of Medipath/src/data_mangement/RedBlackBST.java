@@ -2,8 +2,6 @@ package data_mangement;
 
 import java.util.Stack;
 
-//BST MAY BE COMPLETELY UNNESSESCARY IF RANGES CAN REPLACE IT
-
 public class RedBlackBST<Key extends Comparable<Key>, Value>{
 	private static final boolean RED = true;
 	private static final boolean BLACK = false;
@@ -11,7 +9,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value>{
 	
 	private class Node{	
 		Key key;
-		Value val; //Make this an array so we can have multiple objects as vals, so multiple keys isn't death.
+		Value val; 
 		Node left, right;
 		int n;
 		boolean colour;
