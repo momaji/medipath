@@ -101,9 +101,10 @@ public class ReadExcel {
 		
 
 		/*
-		 * Stack<Object> allkeys = new Stack<Object>(); allkeys = (Stack<Object>)
-		 * combine.tree.keys(); while (!allkeys.isEmpty()) { Iterator<Object> m =
-		 * (combine.table.get((Integer) allkeys.pop())).iterator(); 
+		 * Stack<Object> allkeys = new Stack<Object>(); 
+		 * allkeys = (Stack<Object>) combine.tree.keys();
+		 * while (!allkeys.isEmpty()) { 
+		 * Iterator<Object> m = (combine.table.get((Integer) allkeys.pop())).iterator(); 
 		 * while (m.hasNext()){
 		 * Object element = m.next(); 
 		 * // System.out.println(element); } 
@@ -132,7 +133,7 @@ public class ReadExcel {
 		// combine.printIterable(1040,1040);
 		// System.out.println(combine.getACCs(tree.keys()));
 
-		Iterator<Object> itrObjects = (Iterator<Object>) combine.getACCs(tree.keys()).iterator();
+		Iterator<Object> itrObjects = (Iterator<Object>) combine.getATPs(tree.keys()).iterator();
 		Iterator<Object> itrZips = (Iterator<Object>) combine.getZips(tree.keys()).iterator();
 		int objects = 0;
 		int zips = 0;

@@ -5,6 +5,7 @@ import java.net.*;
 import java.util.*;
 
 public class Distance {
+	
 	public static void main(String[] args) {
 		ReadExcel test = new ReadExcel();
 		test.setInputFile("medipath.xls");
@@ -20,13 +21,10 @@ public class Distance {
 		
 		ProviderDataObject obj1 = (ProviderDataObject) (((PriorityQueue) itr.next()).poll()); //gets the cheapest object at lowest zip
 		ProviderDataObject obj2 = (ProviderDataObject) (((PriorityQueue) itr.next()).poll()); //gets the cheapest object at the second lowest zip
-		
+
 		while(itr.hasNext()) {
 			obj2 = (ProviderDataObject) (((PriorityQueue) itr.next()).poll());
 		}
-		
-		System.out.println(obj1);
-		System.out.println(obj2);
 		
 		String originAddress = obj1.getProviderAddress();
 		String originZip = obj1.getProviderZipStr();
@@ -35,6 +33,7 @@ public class Distance {
 		
 		double x = getDistance( originAddress,  originZip,  destAddress,  destZip );
 		System.out.println("DISTANCE: " + x + " miles");
+		System.out.println(ReadExcel.combine.getCities(ReadExcel.combine.tree.keys(1040,5000)));
 
 	}
 	
