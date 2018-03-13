@@ -93,5 +93,10 @@ public class ProviderDataObject implements Comparable<Object> {
 	public String getDRGDef() {
 		return DRGDef;
 	}
+	
+	public int getDRGDefNum() {
+		return Integer.parseInt(DRGDef.substring(0, 3));
+	}
+
 
 }

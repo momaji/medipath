@@ -157,5 +157,6 @@ public class ReadExcel {
 		System.out.println("");
 		System.out.println(combine.getCheapestObject(1040));
 		System.out.println(combine.getObject(77504, 60643.68));
+		System.out.println(combine.getObject(77504, 60643.68).getDRGDefNum());
 	}
 }

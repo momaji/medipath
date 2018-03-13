@@ -185,5 +185,15 @@ public class BSTHashServices {
 		}
 		return (Iterable<Object>) zips;
 	}
-
+	
+	public Iterable<Object> getsDRGnum(Iterable<Object> allkeys) {
+		PriorityQueue<Object> zips = new PriorityQueue<Object>();
+		Iterator<Object> itr = allkeys.iterator();
+		while (itr.hasNext()) {
+			Iterator<Object> m = (this.table.get((Integer) itr.next())).iterator();
+			while(m.hasNext())
+				zips.add(((ProviderDataObject) m.next()).getACC());
+		}
+		return (Iterable<Object>) zips;
+	}
 }
