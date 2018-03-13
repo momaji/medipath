@@ -18,8 +18,8 @@ public class Distance {
 		Vector Objects = (Vector) ReadExcel.combine.returnObjects(ReadExcel.combine.tree.keys());
 		Iterator itr = Objects.iterator();
 		
-		ProviderDataObject obj1 = (ProviderDataObject) (((PriorityQueue) itr.next()).poll()); //gets the cheapest object
-		ProviderDataObject obj2 = (ProviderDataObject) (((PriorityQueue) itr.next()).poll());
+		ProviderDataObject obj1 = (ProviderDataObject) (((PriorityQueue) itr.next()).poll()); //gets the cheapest object at lowest zip
+		ProviderDataObject obj2 = (ProviderDataObject) (((PriorityQueue) itr.next()).poll()); //gets the cheapest object at the second lowest zip
 		
 		while(itr.hasNext()) {
 			obj2 = (ProviderDataObject) (((PriorityQueue) itr.next()).poll());
