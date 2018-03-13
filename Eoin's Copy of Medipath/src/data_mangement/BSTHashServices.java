@@ -104,7 +104,7 @@ public class BSTHashServices {
 	}
 	
 	public ProviderDataObject getCheapestObject(int key) {
-		PriorityQueue<Object> queue = (PriorityQueue<Object>) this.getACCs(singleton(key));
+		PriorityQueue<Object> queue = (PriorityQueue<Object>) this.getATPs(singleton(key));
 		return this.getObject(key, (double) queue.poll());
 	}
 	
@@ -154,13 +154,13 @@ public class BSTHashServices {
 		return (Iterable<Object>) zips;
 	}
 	
-	public Iterable<Object> getACCs(Iterable<Object> allkeys) {
+	public Iterable<Object> getATPs(Iterable<Object> allkeys) {
 		PriorityQueue<Object> zips = new PriorityQueue<Object>();
 		Iterator<Object> itr = allkeys.iterator();
 		while (itr.hasNext()) {
 			Iterator<Object> m = (this.table.get((Integer) itr.next())).iterator();
 			while(m.hasNext())
-				zips.add(((ProviderDataObject) m.next()).getACC());
+				zips.add(((ProviderDataObject) m.next()).getATP());
 		}
 		return (Iterable<Object>) zips;
 	}
@@ -192,7 +192,7 @@ public class BSTHashServices {
 		while (itr.hasNext()) {
 			Iterator<Object> m = (this.table.get((Integer) itr.next())).iterator();
 			while(m.hasNext())
-				zips.add(((ProviderDataObject) m.next()).getACC());
+				zips.add(((ProviderDataObject) m.next()).getDRGDefNum());
 		}
 		return (Iterable<Object>) zips;
 	}

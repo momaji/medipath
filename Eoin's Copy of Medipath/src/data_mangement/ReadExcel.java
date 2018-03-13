@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.PriorityQueue;
+import java.util.Stack;
 //import java.util.Stack;
 import java.util.Vector;
 
@@ -132,7 +133,7 @@ public class ReadExcel {
 		// combine.printIterable(1040,1040);
 		// System.out.println(combine.getACCs(tree.keys()));
 
-		Iterator<Object> itrObjects = (Iterator<Object>) combine.getACCs(tree.keys()).iterator();
+		Iterator<Object> itrObjects = (Iterator<Object>) combine.getATPs(tree.keys()).iterator();
 		Iterator<Object> itrZips = (Iterator<Object>) combine.getZips(tree.keys()).iterator();
 		int objects = 0;
 		int zips = 0;
@@ -150,11 +151,14 @@ public class ReadExcel {
 			itrObjects.next();
 			// System.out.println("ZIPs: complete, ACC: "+ itrObjects.next());
 		}
-
+		Stack<Object> num = new Stack();
+		num.add(1040);
 		System.out.println("");
 		System.out.println("#Total Zip Codes: " + zips + ", #Total ProviderDataObjects: " + objects);
 		System.out.println("#Total Zip Codes (from queue): " + allZips.size());
 		System.out.println("");
+		System.out.println(combine.returnObjects(num));
+		System.out.println(combine.getsDRGnum(num));
 		System.out.println(combine.getCheapestObject(1040));
 		System.out.println(combine.getObject(77504, 60643.68));
 		System.out.println(combine.getObject(77504, 60643.68).getDRGDefNum());

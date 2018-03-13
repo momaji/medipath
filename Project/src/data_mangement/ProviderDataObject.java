@@ -40,7 +40,7 @@ public class ProviderDataObject implements Comparable<Object> {
 
 	private boolean less(ProviderDataObject a, ProviderDataObject b) {
 		if(a.ProviderZip == b.ProviderZip) {
-			return (a.ACC < b.ACC);
+			return (a.ATP < b.ATP);
 		}
 		return (a.ProviderZip < b.ProviderZip);
 	}
@@ -73,6 +73,13 @@ public class ProviderDataObject implements Comparable<Object> {
 	public int getProviderZip() {
 		return this.ProviderZip;
 	}
+	
+	public String getProviderZipStr() {
+		if(String.valueOf(this.ProviderZip).length() == 4) 
+			return ("0" + String.valueOf(this.ProviderZip));
+		return (String.valueOf(this.ProviderZip));
+	}
+
 	
 	public String getHospitalRRD() {
 		return HospitalRRD;

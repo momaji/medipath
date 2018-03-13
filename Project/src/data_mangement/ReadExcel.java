@@ -83,7 +83,7 @@ public class ReadExcel {
 		combine = new BSTHashServices(tree, table);
 	}
 
-	public static void main(String[] args) throws IOException {
+	/*public static void main(String[] args) throws IOException {
 
 		begin();
 
@@ -98,7 +98,7 @@ public class ReadExcel {
 		 * size = times.size(); System.out.println("pop"); 
 		 * while (!times.empty()) {average += times.pop(); } 
 		 * System.out.println(average /= size);
-		 */
+		
 
 		/*
 		 * Stack<Object> allkeys = new Stack<Object>(); allkeys = (Stack<Object>)
@@ -108,7 +108,7 @@ public class ReadExcel {
 		 * Object element = m.next(); 
 		 * // System.out.println(element); } 
 		 * }
-		 */
+		 
 
 		// best way to get cheapest objects in a range
 		Iterator<Object> all = tree.keys(1040, 5600).iterator(); // change keys to the range(int, int) or to an
@@ -155,8 +155,9 @@ public class ReadExcel {
 		System.out.println("#Total Zip Codes: " + zips + ", #Total ProviderDataObjects: " + objects);
 		System.out.println("#Total Zip Codes (from queue): " + allZips.size());
 		System.out.println("");
+		System.out.println(combine.returnObjects(tree.keys(1040, 10040)));
 		System.out.println(combine.getCheapestObject(1040));
 		System.out.println(combine.getObject(77504, 60643.68));
 		System.out.println(combine.getObject(77504, 60643.68).getDRGDefNum());
-	}
+	}*/
 }
