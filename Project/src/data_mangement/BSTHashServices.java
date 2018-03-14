@@ -196,4 +196,21 @@ public class BSTHashServices {
 		}
 		return (Iterable<Object>) zips;
 	}
+	
+	public Iterable<Object> getsDRGobjects(Iterable<Object> allkeys, int usrDRG) {
+		PriorityQueue<Object> zips = new PriorityQueue<Object>();
+		Iterator<Object> itr = allkeys.iterator();
+		while (itr.hasNext()) {
+			Iterator<Object> m = (this.table.get((Integer) itr.next())).iterator();
+			while(m.hasNext()) {
+				ProviderDataObject that = (ProviderDataObject) m.next();
+				if(that.getDRGDefNum() == usrDRG) {
+					zips.add(that);					
+				}
+			}
+				
+		}
+		return (Iterable<Object>) zips;
+		
+	}
 }

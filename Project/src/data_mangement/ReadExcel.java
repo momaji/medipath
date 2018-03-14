@@ -4,10 +4,7 @@ package data_mangement;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.PriorityQueue;
-//import java.util.Stack;
-import java.util.Vector;
+import java.util.*;
 
 import jxl.Cell;
 import jxl.Sheet;
@@ -82,10 +79,15 @@ public class ReadExcel {
 
 		combine = new BSTHashServices(tree, table);
 	}
-
-	/*public static void main(String[] args) throws IOException {
+	/*
+	public static void main(String[] args) throws IOException {
 
 		begin();
+		//this gets all the objects of a certain procedure number in a zip code range, and iterates through it.
+		Iterator<Object> itr = combine.getsDRGobjects(combine.tree.keys(52032,67890),203).iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
 
 		/*
 		 * int i, size = 0; double average = 0; Stack<Long> times = new Stack<Long>();
@@ -162,3 +164,6 @@ public class ReadExcel {
 		System.out.println(combine.getObject(77504, 60643.68).getDRGDefNum());
 	}*/
 }
+
+
+

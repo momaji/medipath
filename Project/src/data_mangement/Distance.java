@@ -15,6 +15,11 @@ public class Distance {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		//this gets all the objects of a certain procedure number in a zip code range, and iterates through it.
+		Iterator<Object> itr1 = ReadExcel.combine.getsDRGobjects(ReadExcel.combine.tree.keys(52032,67890),203).iterator();
+		while(itr1.hasNext()) {
+			System.out.println(itr1.next());
+		}
 		
 		Vector Objects = (Vector) ReadExcel.combine.returnObjects(ReadExcel.combine.tree.keys());
 		Iterator itr = Objects.iterator();
