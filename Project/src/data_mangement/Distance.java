@@ -30,7 +30,7 @@ public class Distance {
 		while(itr.hasNext()) {
 			ProviderDataObject temp = (ProviderDataObject) ((itr.next()));
 			temp.setDistance(getDistance(originAddress,  originZip,  temp.getProviderAddress(),  temp.getProviderZipStr() ));
-			System.out.println(temp.getDistance());
+			System.out.println(temp);
 		}
 			
 
@@ -57,6 +57,10 @@ public class Distance {
 		return distance;
 	}
 	
+	private static double getDistance(ProviderDataObject start, ProviderDataObject dest) {
+		return getDistance(start.getProviderAddress(), start.getProviderZipStr(), dest.getProviderAddress(), dest.getProviderZipStr());
+	}
+
 	private static ArrayList<String> getJSON(String originAddress, String originZip, String destAddress, String destZip) {
 		
 		ArrayList<String> result = new ArrayList<String>();
