@@ -13,6 +13,7 @@ public class ProviderDataObject implements Comparable<Object> {
 	private final double ACC;
 	private final double ATP;
 	private final double AMP;
+	private double Distance;
 	
 	public ProviderDataObject(String DRGDef, int ProviderID, String ProviderName, String ProviderAddress, 
 			String ProviderCity, String ProviderState, int ProviderZip, String HospitalRRD, 
@@ -105,5 +106,12 @@ public class ProviderDataObject implements Comparable<Object> {
 		return Integer.parseInt(DRGDef.substring(0, 3));
 	}
 
+	public double getDistance() {
+		return Distance;
+	}
+
+	public void setDistance(double distance) {
+		Distance = distance;
+	}
 
 }
