@@ -23,18 +23,14 @@ public class Distance {
 		String destZip;
 		
 		//this gets all the objects of a certain procedure number in a zip code range, and iterates through it.
-		PriorityQueue hospitals = (PriorityQueue) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,2000),57, state);
+		PriorityQueue hospitals = (PriorityQueue) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,1060),57, state);
 		Iterator<Object> itr =  hospitals.iterator();
 		
 		//ProviderDataObject[] temp = new ProviderDataObject[hospitals.size()];
 		while(itr.hasNext()) {
 			ProviderDataObject temp = (ProviderDataObject) ((itr.next()));
 			temp.setDistance(getDistance(originAddress,  originZip,  temp.getProviderAddress(),  temp.getProviderZipStr() ));
-		}
-		Iterator<Object> itr2 =  hospitals.iterator();
-		while(itr2.hasNext()) {
-			System.out.println(((ProviderDataObject) itr2.next()).getDistance());
-			System.out.println();
+			System.out.println(temp.getDistance());
 		}
 			
 
