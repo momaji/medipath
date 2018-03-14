@@ -25,14 +25,13 @@ public class Distance {
 		//this gets all the objects of a certain procedure number in a zip code range, and iterates through it.
 		PriorityQueue hospitals = (PriorityQueue) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,1060),57, state);
 		Iterator<Object> itr =  hospitals.iterator();
-		
-		//ProviderDataObject[] temp = new ProviderDataObject[hospitals.size()];
+		System.out.println(hospitals.peek());
 		while(itr.hasNext()) {
 			ProviderDataObject temp = (ProviderDataObject) ((itr.next()));
 			temp.setDistance(getDistance(originAddress,  originZip,  temp.getProviderAddress(),  temp.getProviderZipStr() ));
-			System.out.println(temp);
 		}
-			
+		
+		System.out.println(hospitals.peek());
 
 		//System.out.println(ReadExcel.combine.getCities(ReadExcel.combine.tree.keys(1040,5000)));
 
@@ -59,6 +58,10 @@ public class Distance {
 	
 	private static double getDistance(ProviderDataObject start, ProviderDataObject dest) {
 		return getDistance(start.getProviderAddress(), start.getProviderZipStr(), dest.getProviderAddress(), dest.getProviderZipStr());
+	}
+	
+	private static double getDistance(ProviderDataObject start, String destAddress, String destZip) {
+		return getDistance(start.getProviderAddress(), start.getProviderZipStr(), destAddress, destZip);
 	}
 
 	private static ArrayList<String> getJSON(String originAddress, String originZip, String destAddress, String destZip) {
