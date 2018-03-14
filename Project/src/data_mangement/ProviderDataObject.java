@@ -13,7 +13,7 @@ public class ProviderDataObject implements Comparable<Object> {
 	private final double ACC;
 	private final double ATP;
 	private final double AMP;
-	private double Distance;
+	private double Distance = 0;
 	
 	public ProviderDataObject(String DRGDef, int ProviderID, String ProviderName, String ProviderAddress, 
 			String ProviderCity, String ProviderState, int ProviderZip, String HospitalRRD, 
@@ -40,6 +40,11 @@ public class ProviderDataObject implements Comparable<Object> {
 	}
 
 	private boolean less(ProviderDataObject a, ProviderDataObject b) {
+		
+		if(a.Distance != 0 && b.Distance != 0) {
+			return (a.Distance <= b.Distance);
+		}
+		
 		if(a.ProviderZip == b.ProviderZip) {
 			return (a.ATP < b.ATP);
 		}
@@ -48,7 +53,10 @@ public class ProviderDataObject implements Comparable<Object> {
 	
 	@Override
 	public String toString() {
-		return this.DRGDef + ", " + this.ProviderName + ", " + this.ProviderZip;
+		return "Procedure: " + this.DRGDef + 
+				"\nHospital: " + this.ProviderName + 
+				"\nAddress: " + this.ProviderAddress + ", " + this.ProviderZip + ", " + this.ProviderZip + 
+				"Distance: " + this.Distance + " miles";
 	}
 
 	public double getAMP() {

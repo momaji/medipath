@@ -213,4 +213,27 @@ public class BSTHashServices {
 		return (Iterable<Object>) zips;
 		
 	}
+	
+	public Iterable<Object> getHospitalsInRange(Iterable<Object> allkeys, int procedureNum, String state) {
+		boolean exists = false;
+		PriorityQueue<Object> hospitals = new PriorityQueue<Object>();
+		Iterator<Object> itr = allkeys.iterator();
+		while (itr.hasNext()) {
+			Iterator<Object> m = (this.table.get((Integer) itr.next())).iterator();
+			while(m.hasNext()) {
+				ProviderDataObject that = (ProviderDataObject) m.next();
+				if(that.getDRGDefNum() == procedureNum) {
+					if(that.getProviderState().equals(state)) {
+						hospitals.add(that);
+						exists = true;
+					}			
+				}
+			}
+				
+		}
+		if(!exists) System.out.println("No hospitals in this state perform that procedure");
+		
+		return (Iterable<Object>) hospitals;
+		
+	}
 }

@@ -15,30 +15,30 @@ public class Distance {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		String originAddress = "McMaster University";
+		String originZip = "L8S4L8";
+		String state = "AL";
+		String destAddress;
+		String destZip;
+		
 		//this gets all the objects of a certain procedure number in a zip code range, and iterates through it.
-		Iterator<Object> itr1 = ReadExcel.combine.getsDRGobjects(ReadExcel.combine.tree.keys(52032,67890),203).iterator();
-		while(itr1.hasNext()) {
-			System.out.println(itr1.next());
-		}
+		PriorityQueue hospitals = (PriorityQueue) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(),57, state);
+		Iterator<Object> itr =  hospitals.iterator();
 		
-		Vector Objects = (Vector) ReadExcel.combine.returnObjects(ReadExcel.combine.tree.keys());
-		Iterator itr = Objects.iterator();
-		
-		ProviderDataObject obj1 = (ProviderDataObject) (((PriorityQueue) itr.next()).poll()); //gets the cheapest object at lowest zip
-		ProviderDataObject obj2 = (ProviderDataObject) (((PriorityQueue) itr.next()).poll()); //gets the cheapest object at the second lowest zip
-
+		//ProviderDataObject[] temp = new ProviderDataObject[hospitals.size()];
 		while(itr.hasNext()) {
-			obj2 = (ProviderDataObject) (((PriorityQueue) itr.next()).poll());
+			ProviderDataObject temp = (ProviderDataObject) ((itr.next()));
+			temp.setDistance(getDistance( originAddress,  originZip,  temp.getProviderAddress(),  temp.getProviderZipStr() ));
 		}
-		
-		String originAddress = obj1.getProviderAddress();
-		String originZip = obj1.getProviderZipStr();
-		String destAddress = obj2.getProviderAddress();
-		String destZip = obj2.getProviderZipStr();
-		
-		double x = getDistance( originAddress,  originZip,  destAddress,  destZip );
-		System.out.println("DISTANCE: " + x + " miles");
-		System.out.println(ReadExcel.combine.getCities(ReadExcel.combine.tree.keys(1040,5000)));
+		Iterator<Object> itr2 =  hospitals.iterator();
+		while(itr2.hasNext()) {
+			System.out.println(itr2.next());
+			System.out.println();
+		}
+			
+
+		//System.out.println(ReadExcel.combine.getCities(ReadExcel.combine.tree.keys(1040,5000)));
 
 	}
 	
@@ -57,7 +57,7 @@ public class Distance {
 		
 		index++;
 		int length = data.get(index).length();
-		distance = Double.parseDouble(data.get(index).substring(8, length-4));
+		distance = Double.parseDouble(data.get(index).substring(8, length-4).replace(",", ""));
 		return distance;
 	}
 	
@@ -81,7 +81,7 @@ public class Distance {
 			newDA = newDA + "+" + temp[i];
 		}
 		
-		address = "https://maps.googleapis.com/maps/api/directions/json?origin=" + newOA.toLowerCase() + ",+" + originZip + "&destination=" + newDA.toLowerCase() + ",+" + destZip;
+		address = "https://maps.googleapis.com/maps/api/directions/json?origin=" + newDA.toLowerCase() + ",+" + destZip + "&destination=" + newOA.toLowerCase() + ",+" + originZip;
 		
 		try {
 
