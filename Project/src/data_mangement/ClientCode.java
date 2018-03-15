@@ -13,10 +13,16 @@ public class ClientCode {
 		
 		//this gets all the objects of a certain procedure number in a zip code range, 
 		//and sets the distance from the user for all objects matching the described conditions.
-		PriorityQueue<Object> hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,4080),57, state);
+		PriorityQueue<Object> hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,1201),57, state);
 		//Distance.setDistances(hospitals, originAddress,originZip);
-		while(hospitals.size() != 0)
+		while(hospitals.size() != 0){
+			((ProviderDataObject) hospitals.poll()).setDistance(100);
+		}
+		
+		hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,1201),57, state);
+		while(hospitals.size() != 0){
 			System.out.println(hospitals.poll());
-
+			System.out.println("");
+		}
 	}
 }

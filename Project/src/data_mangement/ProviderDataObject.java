@@ -57,10 +57,12 @@ public class ProviderDataObject implements Comparable<Object> {
 			return "Procedure: " + this.DRGDef + 
 				"\nHospital: " + this.ProviderName + 
 				"\nAddress: " + this.ProviderAddress + ", " + this.ProviderZip + ", " + 
+				"\nPrice: " + this.ATP +
 				"\nDistance: " + this.Distance + " miles";
 		}
 		return "Procedure: " + this.DRGDef + 
 				"\nHospital: " + this.ProviderName + 
+				"\nPrice: " + this.ATP +
 				"\nAddress: " + this.ProviderAddress + ", " + this.ProviderZip;
 	}
 
