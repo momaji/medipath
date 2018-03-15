@@ -58,13 +58,10 @@ public class ProviderDataObject implements Comparable<Object> {
 				"\nHospital: " + this.ProviderName + 
 				"\nAddress: " + this.ProviderAddress + ", " + this.ProviderZip + ", " + 
 				"\nDistance: " + this.Distance + " miles";
-<<<<<<< HEAD
 		}
 		return "Procedure: " + this.DRGDef + 
 				"\nHospital: " + this.ProviderName + 
 				"\nAddress: " + this.ProviderAddress + ", " + this.ProviderZip;
-=======
->>>>>>> branch 'master' of https://github.com/momaji/medipath.git
 	}
 
 	public double getAMP() {
