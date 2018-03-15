@@ -52,11 +52,11 @@ public class Distance {
 		return getDistance(start.getProviderAddress(), start.getProviderZipStr(), destAddress, destZip);
 	}
 	
-	private static double getDistance(ProviderDataObject start, ProviderDataObject dest) {
+	public static double getDistance(ProviderDataObject start, ProviderDataObject dest) {
 		return getDistance(start.getProviderAddress(), start.getProviderZipStr(), dest.getProviderAddress(), dest.getProviderZipStr());
 	}
 	
-	private static void setDistances(Iterable<Object> hospitals, String destAddress, String destZip) {
+	public static void setDistances(Iterable<Object> hospitals, String destAddress, String destZip) {
 		Iterator<Object> itr = hospitals.iterator();
 		while(itr.hasNext()){
 			ProviderDataObject temp = (ProviderDataObject) itr.next();
