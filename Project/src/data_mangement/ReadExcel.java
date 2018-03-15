@@ -4,8 +4,6 @@ package data_mangement;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
-
 import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
@@ -25,12 +23,6 @@ public class ReadExcel {
 
 	private static Double parse(String string) {
 		return Double.parseDouble((string).substring(1).replace(",", ""));
-	}
-
-	private static void begin() throws IOException {
-		ReadExcel test = new ReadExcel();
-		test.setInputFile("medipath.xls");
-		test.read();
 	}
 
 	public void read() throws IOException {

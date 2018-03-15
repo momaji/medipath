@@ -21,11 +21,10 @@ public class Distance {
 		String state = "MA";
 		
 		//this gets all the objects of a certain procedure number in a zip code range, and sets the distance from the user for all objects matching the described conditions.
-		PriorityQueue<Object> hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,2060),57, state);
+		PriorityQueue<Object> hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,1060),57, state);
 		setDistances(hospitals, originAddress,originZip);
 		while(hospitals.size() != 0)
 			System.out.println(hospitals.poll());
-
 		//System.out.println(ReadExcel.combine.getCities(ReadExcel.combine.tree.keys(1040,5000)));
 
 	}
@@ -49,10 +48,6 @@ public class Distance {
 		return distance;
 	}
 
-	private static double getDistance(ProviderDataObject start, ProviderDataObject dest) {
-		return getDistance(start.getProviderAddress(), start.getProviderZipStr(), dest.getProviderAddress(), dest.getProviderZipStr());
-	}
-	
 	private static double getDistance(ProviderDataObject start, String destAddress, String destZip) {
 		return getDistance(start.getProviderAddress(), start.getProviderZipStr(), destAddress, destZip);
 	}
@@ -93,7 +88,6 @@ public class Distance {
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setRequestMethod("GET");
 			conn.setRequestProperty("Accept", "application/json");
-			int r = conn.getResponseCode();
 			System.out.println("Sending GET request to URL: " + address);
 			
 			BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
@@ -105,7 +99,7 @@ public class Distance {
 			data = result.toString();
 
 		}catch(Exception e) {
-			System.out.println("ERROR: Data could not be loaded");
+			System.out.println(data);
 		}
 
 		return result;
