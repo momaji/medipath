@@ -42,12 +42,12 @@ public class ProviderDataObject implements Comparable<Object> {
 	private boolean less(ProviderDataObject a, ProviderDataObject b) {
 		
 		if(a.Distance != 0 && b.Distance != 0) {
-			return (a.Distance <= b.Distance);
+			if(a.Distance == b.Distance)
+				return (a.ATP < b.ATP);
+			return (a.Distance < b.Distance);
 		}
-		
-		if(a.ProviderZip == b.ProviderZip) {
+		if(a.ProviderZip == b.ProviderZip)
 			return (a.ATP < b.ATP);
-		}
 		return (a.ProviderZip < b.ProviderZip);
 	}
 	
