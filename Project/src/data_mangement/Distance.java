@@ -19,11 +19,9 @@ public class Distance {
 		String originAddress = "McMaster University";
 		String originZip = "L8S4L8";
 		String state = "MA";
-		String destAddress;
-		String destZip;
 		
-		//this gets all the objects of a certain procedure number in a zip code range, and iterates through it.
-		PriorityQueue hospitals = (PriorityQueue) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,1060),57, state);
+		//this gets all the objects of a certain procedure number in a zip code range, and sets the distance from the user for all objects matching the described conditions.
+		PriorityQueue<Object> hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,1060),57, state);
 		System.out.println(hospitals.peek());
 		setDistances(hospitals, originAddress,originZip);
 		System.out.println(hospitals.peek());
@@ -50,7 +48,7 @@ public class Distance {
 		distance = Double.parseDouble(data.get(index).substring(8, length-4).replace(",", ""));
 		return distance;
 	}
-	
+
 	private static double getDistance(ProviderDataObject start, ProviderDataObject dest) {
 		return getDistance(start.getProviderAddress(), start.getProviderZipStr(), dest.getProviderAddress(), dest.getProviderZipStr());
 	}
@@ -60,7 +58,7 @@ public class Distance {
 	}
 	
 	private static void setDistances(Iterable<Object> hospitals, String destAddress, String destZip) {
-		Iterator itr = hospitals.iterator();
+		Iterator<Object> itr = hospitals.iterator();
 		while(itr.hasNext()){
 			ProviderDataObject temp = (ProviderDataObject) itr.next();
 			temp.setDistance(getDistance(temp,destAddress,destZip));
