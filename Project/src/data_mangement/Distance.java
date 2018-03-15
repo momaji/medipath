@@ -6,29 +6,6 @@ import java.util.*;
 
 public class Distance {
 	
-	public static void main(String[] args) {
-		ReadExcel test = new ReadExcel();
-		test.setInputFile("medipath.xls");
-		
-		try {
-			test.read();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
-		String originAddress = "McMaster University";
-		String originZip = "L8S4L8";
-		String state = "MA";
-		
-		//this gets all the objects of a certain procedure number in a zip code range, and sets the distance from the user for all objects matching the described conditions.
-		PriorityQueue<Object> hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,1060),57, state);
-		setDistances(hospitals, originAddress,originZip);
-		while(hospitals.size() != 0)
-			System.out.println(hospitals.poll());
-		//System.out.println(ReadExcel.combine.getCities(ReadExcel.combine.tree.keys(1040,5000)));
-
-	}
-	
 	private static double getDistance(String originAddress, String originZip, String destAddress, String destZip ) {
 		double distance = 0;
 		ArrayList<String> data = getJSON(originAddress, originZip, destAddress, destZip);
