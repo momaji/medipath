@@ -214,7 +214,7 @@ public class BSTHashServices {
 		
 	}
 	
-	public Iterable<Object> getHospitalsInRange(Iterable<Object> allkeys, int procedureNum, String state) {
+	public Iterable<Object> getHospitalsInRange(Iterable<Object> allkeys, int procedureNum) {
 		boolean exists = false;
 		PriorityQueue<Object> hospitals = new PriorityQueue<Object>();
 		Iterator<Object> itr = allkeys.iterator();
@@ -223,10 +223,8 @@ public class BSTHashServices {
 			while(m.hasNext()) {
 				ProviderDataObject that = (ProviderDataObject) m.next();
 				if(that.getDRGDefNum() == procedureNum) {
-					if(that.getProviderState().equals(state)) {
 						hospitals.add(that);
-						exists = true;
-					}			
+						exists = true;		
 				}
 			}
 				
