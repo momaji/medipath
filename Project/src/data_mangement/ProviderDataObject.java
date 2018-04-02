@@ -56,7 +56,7 @@ public class ProviderDataObject implements Comparable<Object> {
 		if(this.Distance != 0){
 			return "Procedure: " + this.DRGDef + 
 				"\nHospital: " + this.ProviderName + 
-				"\nAddress: " + this.ProviderAddress + ", " + this.ProviderZip + ", " + 
+				"\nAddress: " + this.ProviderAddress + ", " + this.ProviderZip +
 				"\nPrice: " + this.ATP +
 				"\nDistance: " + this.Distance + " miles";
 		}
