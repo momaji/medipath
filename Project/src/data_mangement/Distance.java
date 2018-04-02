@@ -61,7 +61,9 @@ public class Distance {
 			newDA = newDA + "+" + temp[i];
 		}
 		
-		address = "https://maps.googleapis.com/maps/api/directions/json?origin=" + newDA.toLowerCase() + ",+" + destZip + "&destination=" + newOA.toLowerCase() + ",+" + originZip;
+		// + "&key=AIzaSyAd6Dl_urDCt6ockL52VaIm1_QC6vcwfuU"
+		
+		address = "https://maps.googleapis.com/maps/api/directions/json?origin=" + newDA.toLowerCase() + ",+" + destZip + "&destination=" + newOA.toLowerCase() + ",+" + originZip + "&key=AIzaSyAd6Dl_urDCt6ockL52VaIm1_QC6vcwfuU";
 		
 		try {
 
