@@ -43,10 +43,11 @@ public class ReadExcel {
 			w = Workbook.getWorkbook(inputWorkbook);
 			// Get the first sheet
 			Sheet sheet = w.getSheet(0);
+			System.out.println(sheet.getRows());
 			// getCell is (column,row)
 
 			// loop over first 10 column and lines
-			for (int j = 1; j < 65536; j++) {
+			for (int j = 1; j < sheet.getRows(); j++) {
 
 				Cell cell0 = sheet.getCell(0, j);
 				Cell cell1 = sheet.getCell(1, j);
