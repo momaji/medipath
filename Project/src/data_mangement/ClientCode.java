@@ -39,13 +39,15 @@ public class ClientCode {
 				index = i;
 			}
 		}
+		System.out.println(map);
+		//MinSpanningPath path = new MinSpanningPath(map, index);
 		
-		BellmanFordSP path = new BellmanFordSP(map, index);
+		//path.String();
 		
 		//display(path.getPath(), locations, index);
 		
-		path.String();
-		//System.out.println(map);
+		//path.String();
+
 		//System.out.println(map.E());
 		
 	}

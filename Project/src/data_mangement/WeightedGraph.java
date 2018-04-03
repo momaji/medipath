@@ -20,10 +20,8 @@ public class WeightedGraph {
 	
 	public void addEdge(Edge edge) {
 		int to = edge.to();
-		int from = edge.from();
 		
 		adjacencyList[to].add(edge);
-		adjacencyList[from].add(edge);
 		E++;
 	}
 	
@@ -43,8 +41,8 @@ public class WeightedGraph {
 		String str = "";
 		for(int i = 0; i < V; i++) {
 			str = str + i + " - ";
-			for(int j = 0; j < adjacencyList[i].size(); j++) {
-				str = str + j + ", ";
+			for(Edge j : adjacencyList[i]) {
+				str = str + j.from() + ", " + j.to();
 			}
 			str = str + "\n";
 		}
