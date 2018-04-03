@@ -10,7 +10,10 @@ public class ClientCode {
 		
 		String originAddress = "McMaster University";
 		String originZip = "L8S4L8";
-		int[] prod = {57,178,101,189};
+		int[] prod = {57,57,292,207,39};
+		
+		ReadExcel.combine.printSeperate(ReadExcel.combine.tree.keys());
+		ShortPath(prod,originAddress,originZip);
 		
 		//this gets all the objects of a certain procedure number in a zip code range, 
 		//and sets the distance from the user for all objects matching the described conditions.
@@ -26,19 +29,18 @@ public class ClientCode {
 		System.out.println(locations.get(trace));
 	}
 	
-	public static void ShortPath(int[] prod) {
+	public static void ShortPath(int[] prod, String address, String zip) {
 		ArrayList<ProviderDataObject> locations= new ArrayList<ProviderDataObject>();
-		PriorityQueue<Object> hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,1600),57);
-		//Distance.setDistances(hospitals, originAddress,originZip);
-
+		PriorityQueue<Object> hospitals = new PriorityQueue<Object>();
 		int count = 100;
-		while(hospitals.size() != 0){
-			((ProviderDataObject) hospitals.poll()).setDistance(count);
-			count += 10;
-		}
 		for(int i : prod) {
-			hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,1600),i);
-			locations.add((ProviderDataObject)hospitals.poll());
+			hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(),i);
+			ProviderDataObject cheapest = (ProviderDataObject) hospitals.poll();
+			//(cheapest).setDistance(Distance.getDistance(cheapest,address,zip));
+			(cheapest).setDistance(count++);
+			locations.add(cheapest);
+			
+
 		}
 		
 		WeightedGraph map = GraphData.fillGraph(locations);

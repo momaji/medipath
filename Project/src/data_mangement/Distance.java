@@ -25,7 +25,7 @@ public class Distance {
 		return distance;
 	}
 
-	private static double getDistance(ProviderDataObject start, String destAddress, String destZip) {
+	public static double getDistance(ProviderDataObject start, String destAddress, String destZip) {
 		return getDistance(start.getProviderAddress(), start.getProviderZipStr(), destAddress, destZip);
 	}
 	
