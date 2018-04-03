@@ -68,17 +68,17 @@ public class Distance {
 		try {
 
 			URL url = new URL(address);
-			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-			conn.setRequestMethod("GET");
-			conn.setRequestProperty("Accept", "application/json");
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+			connection.setRequestMethod("GET");
+			connection.setRequestProperty("Accept", "application/json");
 			System.out.println("Sending GET request to URL: " + address);
 			
-			BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-			String line;
-			while ((line = rd.readLine()) != null) {
+			BufferedReader input = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+			String line = "";
+			while ((line = input.readLine()) != null) {
 				result.add(line.replaceAll("\\s+", ""));
 			}
-			rd.close();
+			input.close();
 			data = result.toString();
 
 		}catch(Exception e) {

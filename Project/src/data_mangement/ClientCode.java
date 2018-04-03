@@ -10,22 +10,24 @@ public class ClientCode {
 		
 		String originAddress = "McMaster University";
 		String originZip = "L8S4L8";
-		String state = "MA";
 		
 		ArrayList<ProviderDataObject> locations= new ArrayList<ProviderDataObject>();
 		
 		//this gets all the objects of a certain procedure number in a zip code range, 
 		//and sets the distance from the user for all objects matching the described conditions.
 //<<<<<<< HEAD
-		PriorityQueue<Object> hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,1201),57);
+		PriorityQueue<Object> hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,1600),57);
 		//Distance.setDistances(hospitals, originAddress,originZip);
+		
 		int count = 100;
 		while(hospitals.size() != 0){
 			((ProviderDataObject) hospitals.poll()).setDistance(count);
 			count += 10;
 		}
 		
-		hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,1201),57);
+		
+		
+		hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(1040,1600),57);
 		while(hospitals.size() != 0){
 			locations.add((ProviderDataObject)hospitals.poll());
 		}
@@ -39,25 +41,21 @@ public class ClientCode {
 				index = i;
 			}
 		}
-		System.out.println(map);
-		//MinSpanningPath path = new MinSpanningPath(map, index);
+		//System.out.println(map);
+		MinSpanningPath path = new MinSpanningPath(map, index);
 		
-		//path.String();
+		display(path.getPath(), locations, index);
 		
-		//display(path.getPath(), locations, index);
-		
-		//path.String();
-
-		//System.out.println(map.E());
 		
 	}
 	
 	public static void display(Edge[] path, ArrayList<ProviderDataObject> locations, int start) {
 		int trace = start;
-		for(int i = 0; i < locations.size(); i++) {
+		for(int i = 0; i < locations.size()-1; i++) {
 			System.out.println(locations.get(trace) + "\n");
-			System.out.println(path[trace]);
+			trace = path[trace].from();
 		}
+		System.out.println(locations.get(trace));
 	}
 }
 

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class WeightedGraph {
 	private final int V;
-	private int E;
 	private ArrayList<Edge>[] adjacencyList;
 	
 	public WeightedGraph(int vertices) {
@@ -22,7 +21,6 @@ public class WeightedGraph {
 		int to = edge.to();
 		
 		adjacencyList[to].add(edge);
-		E++;
 	}
 	
 	public ArrayList<Edge> edges(int vertex){
@@ -31,10 +29,6 @@ public class WeightedGraph {
 	
 	public int vertices() {
 		return V;
-	}
-	
-	public int E() {
-		return E;
 	}
 	
 	public String toString() {
