@@ -171,3 +171,484 @@
 03-Apr-2018 21:42:58.142 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT] has finished in [23] ms
 03-Apr-2018 21:42:58.142 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager]
 03-Apr-2018 21:42:58.163 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager] has finished in [21] ms
+03-Apr-2018 21:51:33.224 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context [/mediPath]
+03-Apr-2018 21:51:33.225 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/mediPath] has started
+03-Apr-2018 21:51:33.252 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/mediPath] is completed
+03-Apr-2018 21:51:53.265 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context [/mediPath]
+03-Apr-2018 21:51:53.266 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/mediPath] has started
+03-Apr-2018 21:51:53.298 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/mediPath] is completed
+03-Apr-2018 22:36:42.705 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+03-Apr-2018 22:36:42.706 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:36:42.762 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:36:42.814 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+03-Apr-2018 22:36:42.866 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:36:42.869 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:36:42.871 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:36:42.872 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:36:44.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.5
+03-Apr-2018 22:36:44.677 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 6 2018 21:42:23 UTC
+03-Apr-2018 22:36:44.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.5.0
+03-Apr-2018 22:36:44.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+03-Apr-2018 22:36:44.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.13.3
+03-Apr-2018 22:36:44.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+03-Apr-2018 22:36:44.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+03-Apr-2018 22:36:44.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_161-b12
+03-Apr-2018 22:36:44.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Apr-2018 22:36:44.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:36:44.679 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:36:44.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/conf/logging.properties
+03-Apr-2018 22:36:44.681 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Apr-2018 22:36:44.681 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Apr-2018 22:36:44.681 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Apr-2018 22:36:44.681 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+03-Apr-2018 22:36:44.681 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:36:44.681 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:36:44.681 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/temp
+03-Apr-2018 22:36:44.682 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/graemewoods/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+03-Apr-2018 22:36:44.834 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:36:44.855 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 22:36:44.862 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:36:44.863 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 22:36:44.863 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 628 ms
+03-Apr-2018 22:36:44.889 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Apr-2018 22:36:44.890 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.5
+03-Apr-2018 22:36:44.897 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath]
+03-Apr-2018 22:36:45.235 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath] has finished in [339] ms
+03-Apr-2018 22:36:45.236 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker]
+03-Apr-2018 22:36:45.267 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker] has finished in [31] ms
+03-Apr-2018 22:36:45.268 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs]
+03-Apr-2018 22:36:45.285 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs] has finished in [17] ms
+03-Apr-2018 22:36:45.285 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager]
+03-Apr-2018 22:36:45.324 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager] has finished in [39] ms
+03-Apr-2018 22:36:45.327 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples]
+03-Apr-2018 22:36:45.665 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples] has finished in [338] ms
+03-Apr-2018 22:36:45.665 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT]
+03-Apr-2018 22:36:45.682 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT] has finished in [17] ms
+03-Apr-2018 22:36:45.683 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager]
+03-Apr-2018 22:36:45.708 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager] has finished in [25] ms
+03-Apr-2018 22:36:45.712 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:36:45.722 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:36:45.725 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 861 ms
+03-Apr-2018 22:38:28.337 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+03-Apr-2018 22:38:28.339 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:38:28.396 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:38:28.451 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+03-Apr-2018 22:38:28.489 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:38:28.493 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:38:28.495 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:38:28.495 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:38:30.049 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.5
+03-Apr-2018 22:38:30.052 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 6 2018 21:42:23 UTC
+03-Apr-2018 22:38:30.052 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.5.0
+03-Apr-2018 22:38:30.052 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+03-Apr-2018 22:38:30.053 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.13.3
+03-Apr-2018 22:38:30.053 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+03-Apr-2018 22:38:30.053 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+03-Apr-2018 22:38:30.053 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_161-b12
+03-Apr-2018 22:38:30.053 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Apr-2018 22:38:30.053 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:38:30.054 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:38:30.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/conf/logging.properties
+03-Apr-2018 22:38:30.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Apr-2018 22:38:30.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Apr-2018 22:38:30.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Apr-2018 22:38:30.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+03-Apr-2018 22:38:30.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:38:30.056 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:38:30.056 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/temp
+03-Apr-2018 22:38:30.056 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/graemewoods/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+03-Apr-2018 22:38:30.245 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:38:30.269 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 22:38:30.275 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:38:30.276 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 22:38:30.276 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 841 ms
+03-Apr-2018 22:38:30.360 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Apr-2018 22:38:30.361 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.5
+03-Apr-2018 22:38:30.369 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath]
+03-Apr-2018 22:38:30.855 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath] has finished in [485] ms
+03-Apr-2018 22:38:30.855 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker]
+03-Apr-2018 22:38:30.930 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker] has finished in [72] ms
+03-Apr-2018 22:38:30.931 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs]
+03-Apr-2018 22:38:30.962 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs] has finished in [31] ms
+03-Apr-2018 22:38:30.962 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager]
+03-Apr-2018 22:38:31.012 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager] has finished in [50] ms
+03-Apr-2018 22:38:31.016 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples]
+03-Apr-2018 22:38:31.348 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples] has finished in [332] ms
+03-Apr-2018 22:38:31.348 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT]
+03-Apr-2018 22:38:31.368 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT] has finished in [20] ms
+03-Apr-2018 22:38:31.369 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager]
+03-Apr-2018 22:38:31.390 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager] has finished in [21] ms
+03-Apr-2018 22:38:31.395 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:38:31.403 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:38:31.406 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1129 ms
+03-Apr-2018 22:39:44.481 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+03-Apr-2018 22:39:44.481 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:39:44.540 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:39:44.595 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+03-Apr-2018 22:39:44.633 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:39:44.638 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:39:44.640 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:39:44.641 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:39:46.232 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.5
+03-Apr-2018 22:39:46.236 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 6 2018 21:42:23 UTC
+03-Apr-2018 22:39:46.236 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.5.0
+03-Apr-2018 22:39:46.236 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+03-Apr-2018 22:39:46.236 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.13.3
+03-Apr-2018 22:39:46.237 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+03-Apr-2018 22:39:46.237 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+03-Apr-2018 22:39:46.237 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_161-b12
+03-Apr-2018 22:39:46.237 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Apr-2018 22:39:46.237 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:39:46.237 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:39:46.238 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/conf/logging.properties
+03-Apr-2018 22:39:46.239 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Apr-2018 22:39:46.239 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Apr-2018 22:39:46.240 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Apr-2018 22:39:46.240 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+03-Apr-2018 22:39:46.240 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:39:46.241 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:39:46.241 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/temp
+03-Apr-2018 22:39:46.241 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/graemewoods/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+03-Apr-2018 22:39:46.420 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:39:46.446 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 22:39:46.453 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:39:46.455 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 22:39:46.455 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 708 ms
+03-Apr-2018 22:39:46.560 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Apr-2018 22:39:46.561 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.5
+03-Apr-2018 22:39:46.571 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath]
+03-Apr-2018 22:39:47.074 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath] has finished in [503] ms
+03-Apr-2018 22:39:47.074 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker]
+03-Apr-2018 22:39:47.109 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker] has finished in [35] ms
+03-Apr-2018 22:39:47.109 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs]
+03-Apr-2018 22:39:47.133 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs] has finished in [24] ms
+03-Apr-2018 22:39:47.134 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager]
+03-Apr-2018 22:39:47.180 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager] has finished in [46] ms
+03-Apr-2018 22:39:47.181 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples]
+03-Apr-2018 22:39:47.542 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples] has finished in [362] ms
+03-Apr-2018 22:39:47.542 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT]
+03-Apr-2018 22:39:47.563 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT] has finished in [20] ms
+03-Apr-2018 22:39:47.563 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager]
+03-Apr-2018 22:39:47.586 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager] has finished in [23] ms
+03-Apr-2018 22:39:47.590 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:39:47.599 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:39:47.601 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1145 ms
+03-Apr-2018 22:40:14.398 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+03-Apr-2018 22:40:14.399 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:40:14.459 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:40:14.514 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+03-Apr-2018 22:40:14.551 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:40:14.558 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:40:14.560 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:40:14.561 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:40:20.104 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.5
+03-Apr-2018 22:40:20.107 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 6 2018 21:42:23 UTC
+03-Apr-2018 22:40:20.108 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.5.0
+03-Apr-2018 22:40:20.108 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+03-Apr-2018 22:40:20.108 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.13.3
+03-Apr-2018 22:40:20.108 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+03-Apr-2018 22:40:20.108 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+03-Apr-2018 22:40:20.109 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_161-b12
+03-Apr-2018 22:40:20.109 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Apr-2018 22:40:20.109 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:40:20.109 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:40:20.111 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/conf/logging.properties
+03-Apr-2018 22:40:20.111 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Apr-2018 22:40:20.111 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Apr-2018 22:40:20.111 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Apr-2018 22:40:20.111 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+03-Apr-2018 22:40:20.112 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:40:20.112 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:40:20.112 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/temp
+03-Apr-2018 22:40:20.112 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/graemewoods/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+03-Apr-2018 22:40:20.251 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:40:20.269 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 22:40:20.275 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:40:20.276 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 22:40:20.277 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 745 ms
+03-Apr-2018 22:40:20.301 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Apr-2018 22:40:20.302 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.5
+03-Apr-2018 22:40:20.310 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath]
+03-Apr-2018 22:40:20.792 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath] has finished in [482] ms
+03-Apr-2018 22:40:20.792 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker]
+03-Apr-2018 22:40:20.820 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker] has finished in [28] ms
+03-Apr-2018 22:40:20.821 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs]
+03-Apr-2018 22:40:20.840 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs] has finished in [19] ms
+03-Apr-2018 22:40:20.842 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager]
+03-Apr-2018 22:40:20.890 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager] has finished in [48] ms
+03-Apr-2018 22:40:20.891 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples]
+03-Apr-2018 22:40:21.212 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples] has finished in [322] ms
+03-Apr-2018 22:40:21.212 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT]
+03-Apr-2018 22:40:21.232 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT] has finished in [20] ms
+03-Apr-2018 22:40:21.232 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager]
+03-Apr-2018 22:40:21.259 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager] has finished in [26] ms
+03-Apr-2018 22:40:21.265 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:40:21.276 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:40:21.278 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1000 ms
+03-Apr-2018 22:49:06.858 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+03-Apr-2018 22:49:06.859 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:49:06.919 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:49:06.974 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+03-Apr-2018 22:49:07.017 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:49:07.021 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:49:07.032 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:49:07.033 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:49:09.039 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.5
+03-Apr-2018 22:49:09.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 6 2018 21:42:23 UTC
+03-Apr-2018 22:49:09.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.5.0
+03-Apr-2018 22:49:09.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+03-Apr-2018 22:49:09.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.13.3
+03-Apr-2018 22:49:09.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+03-Apr-2018 22:49:09.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+03-Apr-2018 22:49:09.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_161-b12
+03-Apr-2018 22:49:09.044 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Apr-2018 22:49:09.044 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:49:09.044 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:49:09.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/conf/logging.properties
+03-Apr-2018 22:49:09.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Apr-2018 22:49:09.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Apr-2018 22:49:09.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Apr-2018 22:49:09.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+03-Apr-2018 22:49:09.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:49:09.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:49:09.048 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/temp
+03-Apr-2018 22:49:09.048 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/graemewoods/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+03-Apr-2018 22:49:09.194 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:49:09.217 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 22:49:09.224 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:49:09.225 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 22:49:09.226 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 832 ms
+03-Apr-2018 22:49:09.257 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Apr-2018 22:49:09.257 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.5
+03-Apr-2018 22:49:09.264 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath]
+03-Apr-2018 22:49:09.747 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath] has finished in [482] ms
+03-Apr-2018 22:49:09.747 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker]
+03-Apr-2018 22:49:09.781 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker] has finished in [34] ms
+03-Apr-2018 22:49:09.782 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs]
+03-Apr-2018 22:49:09.800 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs] has finished in [18] ms
+03-Apr-2018 22:49:09.802 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager]
+03-Apr-2018 22:49:09.843 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager] has finished in [42] ms
+03-Apr-2018 22:49:09.843 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples]
+03-Apr-2018 22:49:10.204 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples] has finished in [361] ms
+03-Apr-2018 22:49:10.205 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT]
+03-Apr-2018 22:49:10.228 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT] has finished in [23] ms
+03-Apr-2018 22:49:10.229 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager]
+03-Apr-2018 22:49:10.255 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager] has finished in [26] ms
+03-Apr-2018 22:49:10.259 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:49:10.269 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:49:10.274 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1047 ms
+03-Apr-2018 22:52:07.002 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+03-Apr-2018 22:52:07.005 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:52:07.070 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:52:07.123 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+03-Apr-2018 22:52:07.175 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:52:07.178 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:52:07.205 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:52:07.206 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:52:08.902 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.5
+03-Apr-2018 22:52:08.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 6 2018 21:42:23 UTC
+03-Apr-2018 22:52:08.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.5.0
+03-Apr-2018 22:52:08.907 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+03-Apr-2018 22:52:08.908 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.13.3
+03-Apr-2018 22:52:08.909 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+03-Apr-2018 22:52:08.909 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+03-Apr-2018 22:52:08.910 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_161-b12
+03-Apr-2018 22:52:08.910 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Apr-2018 22:52:08.910 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:52:08.910 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:52:08.911 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/conf/logging.properties
+03-Apr-2018 22:52:08.911 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Apr-2018 22:52:08.912 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Apr-2018 22:52:08.912 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Apr-2018 22:52:08.912 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+03-Apr-2018 22:52:08.912 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:52:08.912 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:52:08.913 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/temp
+03-Apr-2018 22:52:08.913 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/graemewoods/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+03-Apr-2018 22:52:09.053 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:52:09.075 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 22:52:09.081 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:52:09.082 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 22:52:09.082 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 780 ms
+03-Apr-2018 22:52:09.131 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Apr-2018 22:52:09.132 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.5
+03-Apr-2018 22:52:09.146 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath]
+03-Apr-2018 22:52:10.009 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath] has finished in [863] ms
+03-Apr-2018 22:52:10.010 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker]
+03-Apr-2018 22:52:10.050 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker] has finished in [39] ms
+03-Apr-2018 22:52:10.050 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs]
+03-Apr-2018 22:52:10.081 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs] has finished in [30] ms
+03-Apr-2018 22:52:10.081 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager]
+03-Apr-2018 22:52:10.178 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager] has finished in [97] ms
+03-Apr-2018 22:52:10.179 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples]
+03-Apr-2018 22:52:10.617 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples] has finished in [438] ms
+03-Apr-2018 22:52:10.617 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT]
+03-Apr-2018 22:52:10.648 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT] has finished in [31] ms
+03-Apr-2018 22:52:10.649 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager]
+03-Apr-2018 22:52:10.676 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager] has finished in [27] ms
+03-Apr-2018 22:52:10.680 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:52:10.691 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:52:10.693 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1610 ms
+03-Apr-2018 22:56:45.360 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+03-Apr-2018 22:56:45.361 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:56:45.420 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:56:45.473 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+03-Apr-2018 22:56:45.512 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:56:45.515 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:56:45.516 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:56:45.517 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:56:46.465 SEVERE [main] org.apache.catalina.startup.Catalina.initDirs Cannot find specified temporary folder at [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/temp]
+03-Apr-2018 22:56:47.167 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.5
+03-Apr-2018 22:56:47.167 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 6 2018 21:42:23 UTC
+03-Apr-2018 22:56:47.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.5.0
+03-Apr-2018 22:56:47.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+03-Apr-2018 22:56:47.168 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.13.3
+03-Apr-2018 22:56:47.169 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+03-Apr-2018 22:56:47.169 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+03-Apr-2018 22:56:47.170 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_161-b12
+03-Apr-2018 22:56:47.171 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Apr-2018 22:56:47.172 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:56:47.172 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:56:47.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/conf/logging.properties
+03-Apr-2018 22:56:47.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Apr-2018 22:56:47.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Apr-2018 22:56:47.175 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Apr-2018 22:56:47.175 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+03-Apr-2018 22:56:47.175 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:56:47.176 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 22:56:47.176 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/temp
+03-Apr-2018 22:56:47.176 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/graemewoods/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+03-Apr-2018 22:56:47.340 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:56:47.392 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 22:56:47.403 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:56:47.408 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 22:56:47.409 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 945 ms
+03-Apr-2018 22:56:47.473 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Apr-2018 22:56:47.474 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.5
+03-Apr-2018 22:56:47.487 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath]
+03-Apr-2018 22:56:47.982 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath] has finished in [494] ms
+03-Apr-2018 22:56:47.982 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker]
+03-Apr-2018 22:56:48.027 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker] has finished in [45] ms
+03-Apr-2018 22:56:48.028 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs]
+03-Apr-2018 22:56:48.051 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs] has finished in [24] ms
+03-Apr-2018 22:56:48.052 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager]
+03-Apr-2018 22:56:48.109 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager] has finished in [56] ms
+03-Apr-2018 22:56:48.109 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples]
+03-Apr-2018 22:56:48.517 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples] has finished in [408] ms
+03-Apr-2018 22:56:48.517 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT]
+03-Apr-2018 22:56:48.537 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT] has finished in [20] ms
+03-Apr-2018 22:56:48.537 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager]
+03-Apr-2018 22:56:48.564 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager] has finished in [27] ms
+03-Apr-2018 22:56:48.568 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 22:56:48.578 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 22:56:48.581 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1171 ms
+03-Apr-2018 23:03:39.487 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+03-Apr-2018 23:03:39.491 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 23:03:39.551 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 23:03:39.605 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+03-Apr-2018 23:03:39.667 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 23:03:39.670 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 23:03:39.672 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 23:03:39.673 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 23:03:40.674 SEVERE [main] org.apache.catalina.startup.Catalina.initDirs Cannot find specified temporary folder at [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/temp]
+03-Apr-2018 23:03:41.236 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.5
+03-Apr-2018 23:03:41.236 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 6 2018 21:42:23 UTC
+03-Apr-2018 23:03:41.236 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.5.0
+03-Apr-2018 23:03:41.237 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+03-Apr-2018 23:03:41.237 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.13.3
+03-Apr-2018 23:03:41.238 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+03-Apr-2018 23:03:41.238 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+03-Apr-2018 23:03:41.238 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_161-b12
+03-Apr-2018 23:03:41.239 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Apr-2018 23:03:41.239 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 23:03:41.239 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 23:03:41.240 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/conf/logging.properties
+03-Apr-2018 23:03:41.241 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Apr-2018 23:03:41.241 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Apr-2018 23:03:41.242 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Apr-2018 23:03:41.242 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+03-Apr-2018 23:03:41.244 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 23:03:41.244 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 23:03:41.244 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/temp
+03-Apr-2018 23:03:41.244 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/graemewoods/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+03-Apr-2018 23:03:41.422 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 23:03:41.509 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 23:03:41.518 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 23:03:41.519 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 23:03:41.520 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 848 ms
+03-Apr-2018 23:03:41.552 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Apr-2018 23:03:41.553 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.5
+03-Apr-2018 23:03:41.562 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath]
+03-Apr-2018 23:03:42.110 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath] has finished in [547] ms
+03-Apr-2018 23:03:42.110 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker]
+03-Apr-2018 23:03:42.142 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker] has finished in [32] ms
+03-Apr-2018 23:03:42.143 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs]
+03-Apr-2018 23:03:42.158 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs] has finished in [15] ms
+03-Apr-2018 23:03:42.159 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager]
+03-Apr-2018 23:03:42.205 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager] has finished in [46] ms
+03-Apr-2018 23:03:42.205 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples]
+03-Apr-2018 23:03:42.590 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples] has finished in [384] ms
+03-Apr-2018 23:03:42.590 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT]
+03-Apr-2018 23:03:42.619 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT] has finished in [29] ms
+03-Apr-2018 23:03:42.619 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager]
+03-Apr-2018 23:03:42.641 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager] has finished in [22] ms
+03-Apr-2018 23:03:42.644 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 23:03:42.652 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 23:03:42.653 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1133 ms
+03-Apr-2018 23:06:22.729 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/temp]
+03-Apr-2018 23:06:22.749 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/temp] has finished in [21] ms
+03-Apr-2018 23:07:26.099 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+03-Apr-2018 23:07:26.101 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 23:07:26.157 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 23:07:26.213 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+03-Apr-2018 23:07:26.259 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 23:07:26.263 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 23:07:26.266 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 23:07:26.268 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 23:07:28.863 SEVERE [main] org.apache.catalina.startup.Catalina.initDirs Cannot find specified temporary folder at [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/temp]
+03-Apr-2018 23:07:29.375 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.5
+03-Apr-2018 23:07:29.376 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 6 2018 21:42:23 UTC
+03-Apr-2018 23:07:29.376 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.5.0
+03-Apr-2018 23:07:29.376 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+03-Apr-2018 23:07:29.376 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.13.3
+03-Apr-2018 23:07:29.376 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+03-Apr-2018 23:07:29.376 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+03-Apr-2018 23:07:29.377 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_161-b12
+03-Apr-2018 23:07:29.377 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Apr-2018 23:07:29.377 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 23:07:29.377 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 23:07:29.378 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/conf/logging.properties
+03-Apr-2018 23:07:29.378 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Apr-2018 23:07:29.378 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Apr-2018 23:07:29.378 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Apr-2018 23:07:29.378 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+03-Apr-2018 23:07:29.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 23:07:29.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat
+03-Apr-2018 23:07:29.379 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/temp
+03-Apr-2018 23:07:29.379 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/graemewoods/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+03-Apr-2018 23:07:29.513 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 23:07:29.536 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 23:07:29.542 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 23:07:29.543 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Apr-2018 23:07:29.544 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 681 ms
+03-Apr-2018 23:07:29.569 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Apr-2018 23:07:29.569 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.5
+03-Apr-2018 23:07:29.577 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath]
+03-Apr-2018 23:07:29.944 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/mediPath] has finished in [366] ms
+03-Apr-2018 23:07:29.945 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/temp]
+03-Apr-2018 23:07:29.964 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/temp] has finished in [20] ms
+03-Apr-2018 23:07:29.965 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker]
+03-Apr-2018 23:07:29.993 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/HospitalPicker] has finished in [29] ms
+03-Apr-2018 23:07:29.994 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs]
+03-Apr-2018 23:07:30.013 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/docs] has finished in [20] ms
+03-Apr-2018 23:07:30.014 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager]
+03-Apr-2018 23:07:30.068 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/manager] has finished in [54] ms
+03-Apr-2018 23:07:30.115 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples]
+03-Apr-2018 23:07:30.450 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/examples] has finished in [334] ms
+03-Apr-2018 23:07:30.450 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT]
+03-Apr-2018 23:07:30.469 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/ROOT] has finished in [19] ms
+03-Apr-2018 23:07:30.469 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager]
+03-Apr-2018 23:07:30.491 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/graemewoods/Documents/School/2XB3/medipath/Tomcat/webapps/host-manager] has finished in [22] ms
+03-Apr-2018 23:07:30.495 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Apr-2018 23:07:30.507 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+03-Apr-2018 23:07:30.509 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 965 ms
