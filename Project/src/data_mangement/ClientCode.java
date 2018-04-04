@@ -13,7 +13,7 @@ public class ClientCode {
 		int[] prod = {57,57,292,207,39};
 		
 		ReadExcel.combine.printSeperate(ReadExcel.combine.tree.keys());
-		ShortPath(prod,originAddress,originZip);
+		//ShortPath(prod,originAddress,originZip);
 		
 		//this gets all the objects of a certain procedure number in a zip code range, 
 		//and sets the distance from the user for all objects matching the described conditions.
