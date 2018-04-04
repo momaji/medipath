@@ -147,3 +147,17 @@
 0:0:0:0:0:0:0:1 - - [03/Apr/2018:20:39:49 -0400] "POST /mediPath/Input.do HTTP/1.1" 200 161
 0:0:0:0:0:0:0:1 - - [03/Apr/2018:20:40:57 -0400] "GET /Other/HospitalPicker/form.html HTTP/1.1" 200 796
 0:0:0:0:0:0:0:1 - - [03/Apr/2018:20:41:00 -0400] "POST /Other/HospitalPicker/SelectBeer.do HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [03/Apr/2018:20:53:45 -0400] "POST /Other/HospitalPicker/SelectBeer.do HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [03/Apr/2018:21:33:17 -0400] "GET /Other/HospitalPicker/form.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [03/Apr/2018:21:33:18 -0400] "POST /Other/HospitalPicker/SelectBeer.do HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [03/Apr/2018:21:38:17 -0400] "GET /Other/HospitalPicker/form.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [03/Apr/2018:21:38:18 -0400] "GET /Other/HospitalPicker/form.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [03/Apr/2018:21:38:21 -0400] "POST /Other/HospitalPicker/SelectBeer.do HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [03/Apr/2018:21:40:19 -0400] "GET /Other/HospitalPicker/form.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [03/Apr/2018:21:40:20 -0400] "GET /Other/HospitalPicker/form.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [03/Apr/2018:21:40:23 -0400] "POST /Other/HospitalPicker/SelectBeer.do HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [03/Apr/2018:21:42:39 -0400] "GET /Other/HospitalPicker/form.html HTTP/1.1" 404 1111
+0:0:0:0:0:0:0:1 - - [03/Apr/2018:21:42:43 -0400] "GET /HospitalPicker/form.html HTTP/1.1" 200 796
+0:0:0:0:0:0:0:1 - - [03/Apr/2018:21:42:44 -0400] "POST /HospitalPicker/SelectBeer.do HTTP/1.1" 200 179
+0:0:0:0:0:0:0:1 - - [03/Apr/2018:21:45:48 -0400] "GET /mediPath/form.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [03/Apr/2018:21:45:51 -0400] "POST /mediPath/Input.do HTTP/1.1" 200 196
