@@ -20,10 +20,7 @@ public class MinSpanningPath {
 		marked[origin] = true;
 		double min = Double.POSITIVE_INFINITY;
 		Edge e = null;
-		System.out.println(origin + ": ");
-		for(Edge i : g.edges(origin)) {
-			System.out.println(i);
-		}
+
 		for(Edge i : g.edges(origin)) {
 			if(i.weight() < min && !marked[i.from()]) {
 				min = i.weight();
@@ -31,7 +28,6 @@ public class MinSpanningPath {
 			}
 		}
 		marked[e.from()] = true;
-		System.out.println(e);
 		pathTo[e.to()] = e;
 		shortestPath(g, e.from(), len-1);
 	}

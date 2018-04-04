@@ -109,28 +109,6 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
 		return x.val;
 	}
 
-	/*
-	 * public static void main(String[] args) { ProviderDataObject a = new
-	 * ProviderDataObject("aa","aa", "aa", "aa", "aa", 5, "aa", 4, 3, 2, 1);
-	 * ProviderDataObject b = new ProviderDataObject("aa","aa", "aa", "aa", "aa", 6,
-	 * "aa", 4, 3, 2, 1); ProviderDataObject c = new ProviderDataObject("aa","aa",
-	 * "aa", "aa", "aa", 7, "aa", 4, 3, 2, 1); ProviderDataObject d = new
-	 * ProviderDataObject("aa","aa", "aa", "aa", "aa", 8, "aa", 4, 3, 2, 1);
-	 * ProviderDataObject e = new ProviderDataObject("aa","aa", "aa", "aa", "aa",
-	 * 900, "aa", 4, 3, 2, 1); ProviderDataObject f = new
-	 * ProviderDataObject("aa","aa", "aa", "aa", "aa", 9000, "aa", 4, 3, 2, 1);
-	 * RedBlackBST tree = new RedBlackBST(); tree.put(a.getProviderZip(), a);
-	 * tree.put(b.getProviderZip(), b); tree.put(c.getProviderZip(), c);
-	 * tree.put(d.getProviderZip(), d); tree.put(e.getProviderZip(), e);
-	 * tree.put(f.getProviderZip(), f); tree.printVal(tree.root);
-	 * System.out.println(tree.root.left.right.val); Stack aa = new Stack(); aa =
-	 * (Stack) tree.keys(a.getProviderZip(), f.getProviderZip());
-	 * System.out.println(""); System.out.println(aa.size());
-	 * System.out.println(""); for(int i = 0; i < 6; i++) {
-	 * System.out.println(aa.pop()); } System.out.println("");
-	 * System.out.println(aa.size()); }
-	 */
-
 	public Iterable<Object> keys(Key lo, Key hi) {// returns a stack of keys
 		Stack<Object> stack = new Stack<Object>();
 		keys(root, stack, lo, hi);
