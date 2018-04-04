@@ -8,8 +8,9 @@ public class ClientCode {
 		
 		new ReadExcel("medipath.xls");
 		
-		String originAddress = "McMaster University";
-		String originZip = "L8S4L8";
+		String originAddress = "940 virginia avenue";
+		String originZip = "46203";
+		
 		int[] prod = {57,57,292,207,39};
 		
 		ReadExcel.combine.printSeperate(ReadExcel.combine.tree.keys());
@@ -30,11 +31,13 @@ public class ClientCode {
 	}
 	
 	public static void ShortPath(int[] prod, String address, String zip) {
+		int[] keys = new int[2];
+		getKeys(keys, Integer.parseInt(zip));
 		ArrayList<ProviderDataObject> locations= new ArrayList<ProviderDataObject>();
 		PriorityQueue<Object> hospitals = new PriorityQueue<Object>();
 		int count = 100;
 		for(int i : prod) {
-			hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(),i);
+			hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(keys[0], keys[1]),i);
 			ProviderDataObject cheapest = (ProviderDataObject) hospitals.poll();
 			//(cheapest).setDistance(Distance.getDistance(cheapest,address,zip));
 			(cheapest).setDistance(count++);
@@ -56,6 +59,21 @@ public class ClientCode {
 		MinSpanningPath path = new MinSpanningPath(map, index);
 		display(path.getPath(), locations, index);	
 	}
+	
+	public static void getKeys(int[] keys, int zip) {
+		if(zip - 400 < 1040) {
+			keys[0] = 1040;
+		}else {
+			keys[0] = zip - 400;
+		}
+		
+		if(zip + 400 > 99801) {
+			keys[1] = 99801;
+		}else {
+			keys[1] = zip + 400;
+		}
+	}
+	
 }
 		
 		
