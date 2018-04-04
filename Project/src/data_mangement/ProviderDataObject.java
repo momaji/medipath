@@ -54,16 +54,16 @@ public class ProviderDataObject implements Comparable<Object> {
 	@Override
 	public String toString() {
 		if(this.Distance != 0){
-			return "Procedure: " + this.DRGDef + 
-				"\nHospital: " + this.ProviderName + 
-				"\nAddress: " + this.ProviderAddress + ", " + this.ProviderZip +
-				"\nPrice: " + this.ATP +
-				"\nDistance: " + this.Distance + " miles";
+			return "<br>Procedure: " + this.DRGDef + 
+				"<br>Hospital: " + this.ProviderName + 
+				"<br>Address: " + this.ProviderAddress + ", " + this.ProviderZip +
+				"<br>Price: " + this.ATP +
+				"<br>Distance: " + this.Distance + " miles";
 		}
-		return "Procedure: " + this.DRGDef + 
-				"\nHospital: " + this.ProviderName + 
-				"\nPrice: " + this.ATP +
-				"\nAddress: " + this.ProviderAddress + ", " + this.ProviderZip;
+		return "<br>Procedure: " + this.DRGDef + 
+				"<br>Hospital: " + this.ProviderName + 
+				"<br>Price: " + this.ATP +
+				"<br>Address: " + this.ProviderAddress + ", " + this.ProviderZip;
 	}
 
 	public double getAMP() {

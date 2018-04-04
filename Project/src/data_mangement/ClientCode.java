@@ -13,8 +13,8 @@ public class ClientCode {
 		
 		int[] prod = {57,57,292,207,39};
 		
-		ReadExcel.combine.printSeperate(ReadExcel.combine.tree.keys());
-		//ShortPath(prod,originAddress,originZip);
+//		/ReadExcel.combine.printSeperate(ReadExcel.combine.tree.keys());
+		ShortPath(57,originAddress,originZip);
 		
 		//this gets all the objects of a certain procedure number in a zip code range, 
 		//and sets the distance from the user for all objects matching the described conditions.
@@ -58,6 +58,24 @@ public class ClientCode {
 		
 		MinSpanningPath path = new MinSpanningPath(map, index);
 		display(path.getPath(), locations, index);	
+	}
+	
+	public static String ShortPath(int prod, String address, String zip) {
+		int[] keys = new int[2];
+		String out = new String();
+		getKeys(keys, Integer.parseInt(zip));
+		ArrayList<ProviderDataObject> locations= new ArrayList<ProviderDataObject>();
+		PriorityQueue<Object> hospitals = new PriorityQueue<Object>();
+		int count = 100;
+		hospitals = (PriorityQueue<Object>) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(keys[0], keys[1]),prod);
+		
+		while(!hospitals.isEmpty()) {
+			ProviderDataObject cheapest = (ProviderDataObject) hospitals.poll();
+			out += cheapest.toString();
+		}
+		
+		System.out.println(out);
+		return out;
 	}
 	
 	public static void getKeys(int[] keys, int zip) {
