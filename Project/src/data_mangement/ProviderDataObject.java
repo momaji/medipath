@@ -52,7 +52,6 @@ public class ProviderDataObject implements Comparable<Object> {
 	 * @param a - what object you are comparing this this too
 	 * @return 0,-1,1 - 0 if equal, -1 if this is less than a, 1 if this is greater than a
 	 */
-	@Override
 	public int compareTo(Object a) {
 		if(less(this, (ProviderDataObject) a)) return -1;
 		else if(less((ProviderDataObject) a,this)) return 1;

@@ -18,7 +18,7 @@ public class SeperateChainingHash<Key, Value> {
 	 * @param key - the zip code of the object you are hashing
 	 * @return the hashed value of the key
 	 */
-	private int hash(Key key) {return (int) key % m;}
+	private int hash(Key key) {return (Integer) key % m;}
 	
 	/*
 	 * returns the list corresponding to a key
