@@ -32,7 +32,6 @@ public class ProviderDataObject implements Comparable<Object> {
 		this.AMP = AMP;
 	}	
 	
-	@Override
 	public int compareTo(Object a) {
 		if(less(this, (ProviderDataObject) a)) return -1;
 		else if(less((ProviderDataObject) a,this)) return 1;

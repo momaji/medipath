@@ -12,7 +12,7 @@ public class SeperateChainingHash<Key, Value> {
 			st[k] = new SequentialSearchST<Key, Value>();	
 	}
 	
-	private int hash(Key key) {return (int) key % m;}
+	private int hash(Key key) {return (Integer) key % m;}
 	
 	public Iterable<Object> get(Key key) {return st[hash(key)].get(key);}
 	

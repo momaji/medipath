@@ -105,7 +105,7 @@ public class BSTHashServices {
 	
 	public ProviderDataObject getCheapestObject(int key) {
 		PriorityQueue<Object> queue = (PriorityQueue<Object>) this.getACCs(singleton(key));
-		return this.getObject(key, (double) queue.poll());
+		return this.getObject(key, (Double) queue.poll());
 	}
 	
 	private Iterable<Object> singleton(Object key) {

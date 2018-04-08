@@ -21,7 +21,7 @@ public class ClientCode {
 //<<<<<<< HEAD		
 	}
 	
-	public static void display(Edge[] path, ArrayList<ProviderDataObject> locations, int start) {
+	public static void display(WeightedEdge[] path, ArrayList<ProviderDataObject> locations, int start) {
 		int trace = start;
 		for(int i = 0; i < locations.size()-1; i++) {
 			System.out.println(locations.get(trace) + "\n");
