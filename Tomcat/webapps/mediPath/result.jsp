@@ -5,9 +5,14 @@
     <p>
     <%
       List styles = (List)request.getAttribute("styles");
-      Iterator it = styles.iterator();
-      while (it.hasNext()) {
-        out.print("<br>Closest Hospital that performs your surgery is " + it.next());
-      } %>
+      out.print("<br>" + styles.get(0));
+
+      %>
     </body>
   </html>
+
+
+  <%-- Iterator it = styles.iterator();
+  while (it.hasNext()) {
+    out.print("<br>Your selected surgery is " + it.next());
+  } --%>
