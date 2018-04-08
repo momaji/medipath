@@ -13,7 +13,6 @@ public class ClientCode {
 		
 		int[] prod = {57,57,292,207,39};
 		
-//		/ReadExcel.combine.printSeperate(ReadExcel.combine.tree.keys());
 		ShortPath(57,originAddress,originZip);
 		
 		//this gets all the objects of a certain procedure number in a zip code range, 

@@ -2,23 +2,37 @@ package data_mangement;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
-
+/**
+ * 
+ * @author lynag
+ *
+ * @param <Key> - the key of the of object
+ * @param <Value> - the object that you are storing
+ */
 public class SequentialSearchST<Key, Value> {
 	
 	private Node first;
-	
 	private class Node{
 		Key key;
 		Value val;
 		Node next;
-		
+		/**
+		 * Constructor for nodes in the SSST
+		 * @param key - key of object to be inserted
+		 * @param val - val of object to be inserted
+		 * @param next - the next node in the Linked List
+		 */
 		public Node(Key key, Value val, Node next) {
 			this.key = key;
 			this.val = val;
 			this.next = next;
 		}
 	}
-	
+	/**
+	 * 
+	 * @param key
+	 * @return
+	 */
 	public Iterable<Object> get(Key key) {
 		PriorityQueue<Object> m = new PriorityQueue<Object>();
 		for(Node x = first; x!= null; x = x.next) if(key.equals(x.key)) m.add(x.val);
