@@ -1,23 +1,21 @@
 package data_mangement;
 
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.PriorityQueue;
-import java.util.Stack;
-import java.util.Vector;
-/*
- * this class makes use of the services of the hash table and the bst in combination to provide services for the client code
+/**
+ * Services that use both the hash table and the tree together
+ * @author lynag
  */
 public class BSTHashServices {
 
 	public final RedBlackBST<Integer, ProviderDataObject> tree;
 	public final SeperateChainingHash<Integer, ProviderDataObject> table;
-	
 	public BSTHashServices() {
 		this.tree = null;
 		this.table = null;
 	}
-	/* This is the constructor for our combination services
+	/** 
+	 * This is the constructor for our combination services
 	 * @param tree - the red black bst that you are using in conjunction with the hash table
 	 * @param table - the hash table that you are using in conjunction with the red-black bst
 	 */
@@ -27,7 +25,7 @@ public class BSTHashServices {
 		this.table = table;
 	}
 	
-	/*
+	/**
 	 * this gets all the hospitals in a range that perform a specific procedure
 	 * @param allkeys - the range of zip codes that you want to search in for hospitals
 	 * @param procedureNum - the procedure that you are looking for
