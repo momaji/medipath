@@ -17,5 +17,6 @@ public class SeperateChainingHash<Key, Value> {
 	public Iterable<Object> get(Key key) {return st[hash(key)].get(key);}
 	
 	public void put(Key key, Value val) {st[hash(key)].put(key, val);}
+
 }
 
