@@ -3,17 +3,12 @@ package data_mangement;
 // https://www.youtube.com/watch?v=65igZdK9Vd4 (code is in description)
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-
-import jxl.Cell;
-import jxl.Sheet;
-import jxl.Workbook;
-import jxl.read.biff.BiffException;
-
+import java.util.Scanner;
 public class ReadExcel {
 
-	public ReadExcel(String inputFile){
-		this.inputFile = inputFile;
+	public ReadExcel(){
 		try {
 			read();
 		} catch (IOException e) {
@@ -26,18 +21,134 @@ public class ReadExcel {
 	private static final SeperateChainingHash<Integer, ProviderDataObject> table = new SeperateChainingHash<Integer, ProviderDataObject>();
 	public static BSTHashServices combine = new BSTHashServices();
 
-	private String inputFile;
-
-	public void setInputFile(String inputFile) {
-		this.inputFile = inputFile;
-	}
 
 	private static Double parse(String string) {
 		return Double.parseDouble((string).substring(1).replace(",", ""));
 	}
 
 	public void read() throws IOException {
-		File inputWorkbook = new File(inputFile);
+			File file = new File("medipath.csv");
+			try{
+				Scanner inputStream = new Scanner(file);
+				String data = inputStream.nextLine();
+				int v = 0;
+				while(inputStream.hasNext()){
+					v++;
+					data = inputStream.nextLine();
+					//System.out.println(data);
+					
+					String[] values = data.split(",");
+					
+					//System.out.print(values.length+"/");
+					/*System.out.println(values[0] + "/");
+					System.out.println(values[1] + "/");
+					System.out.println(values[2] + "/");
+					System.out.println(values[3] + "/");
+					System.out.println(values[4] + "/");
+					System.out.println(values[5] + "/");*/
+					//System.out.print(values[6]);
+					/*System.out.println(values[7] + "/");
+					System.out.println(values[8] + "/");
+					System.out.println(values[9] + "/");
+					System.out.println(values[10] + "/");
+					System.out.println(values[11] + "/");*/
+					//System.out.println();
+					
+					
+					//6 8 9 10 11 need conversion int int double double double
+					System.out.println(values.length);
+					if (values.length == 12){
+						int zip = Integer.parseInt(values[6]);
+						int discharges = Integer.parseInt(values[8]);
+						int providerID = Integer.parseInt(values[1]);
+						//System.out.println("checked");
+						//getting rid of commas and dollar sign for 9,10,11 and converting to type int
+						//double ACC = Double.parseDouble((cell9.getContents()).substring(1).replace(",", ""));
+						//double ATP = Double.parseDouble((cell10.getContents()).substring(1).replace(",", ""));;
+						//double AMP = Double.parseDouble((cell11.getContents()).substring(1).replace(",", ""));;
+						
+						
+						double ACC = Double.parseDouble(values[9].substring(1));
+						double ATP = Double.parseDouble(values[10].substring(1));
+						double AMP = Double.parseDouble(values[11].substring(1));
+						
+						ProviderDataObject a = new ProviderDataObject(values[0], providerID, values[2], values[3], values[4], values[5], zip, values[7], discharges, ACC, ATP, AMP); 
+						System.out.println(a);
+						tree.put(a.getProviderZip(),a);
+						table.put(a.getProviderZip(),a);
+					}
+					
+					if (values.length == 13){
+						System.out.println(v);
+						int zip = Integer.parseInt(values[7]);
+						int discharges = Integer.parseInt(values[9]);
+						int providerID = Integer.parseInt(values[1]);
+						//System.out.println("checked13");
+						//getting rid of commas and dollar sign for 9,10,11 and converting to type int
+						//double ACC = Double.parseDouble((cell9.getContents()).substring(1).replace(",", ""));
+						//double ATP = Double.parseDouble((cell10.getContents()).substring(1).replace(",", ""));;
+						//double AMP = Double.parseDouble((cell11.getContents()).substring(1).replace(",", ""));;
+						
+						double ACC = Double.parseDouble(values[10].substring(1));
+						double ATP = Double.parseDouble(values[11].substring(1));
+						double AMP = Double.parseDouble(values[12].substring(1));
+						
+						ProviderDataObject a = new ProviderDataObject(values[0], providerID, values[2], values[3]+values[4], values[4], values[5], zip, values[7], discharges, ACC, ATP, AMP); 
+						System.out.println(a);
+						tree.put(a.getProviderZip(),a);
+						table.put(a.getProviderZip(),a);
+					}
+					
+					if (values.length == 14){
+						int zip = Integer.parseInt(values[8]);
+						int discharges = Integer.parseInt(values[10]);
+						int providerID = Integer.parseInt(values[1]);
+						//System.out.println("checked13");
+						//getting rid of commas and dollar sign for 9,10,11 and converting to type int
+						//double ACC = Double.parseDouble((cell9.getContents()).substring(1).replace(",", ""));
+						//double ATP = Double.parseDouble((cell10.getContents()).substring(1).replace(",", ""));;
+						//double AMP = Double.parseDouble((cell11.getContents()).substring(1).replace(",", ""));;
+						
+						double ACC = Double.parseDouble(values[11].substring(1));
+						double ATP = Double.parseDouble(values[12].substring(1));
+						double AMP = Double.parseDouble(values[13].substring(1));
+						
+						ProviderDataObject a = new ProviderDataObject(values[0], providerID, values[2], values[3]+values[4]+values[5], values[4], values[5], zip, values[7], discharges, ACC, ATP, AMP); 
+						System.out.println(a);
+						tree.put(a.getProviderZip(),a);
+						table.put(a.getProviderZip(),a);
+					}
+					
+					if (values.length == 15){
+						int zip = Integer.parseInt(values[9]);
+						int discharges = Integer.parseInt(values[11]);
+						int providerID = Integer.parseInt(values[3]);
+						//System.out.println("checked13");
+						//getting rid of commas and dollar sign for 9,10,11 and converting to type int
+						//double ACC = Double.parseDouble((cell9.getContents()).substring(1).replace(",", ""));
+						//double ATP = Double.parseDouble((cell10.getContents()).substring(1).replace(",", ""));;
+						//double AMP = Double.parseDouble((cell11.getContents()).substring(1).replace(",", ""));;
+						
+						double ACC = Double.parseDouble(values[12].substring(1));
+						double ATP = Double.parseDouble(values[13].substring(1));
+						double AMP = Double.parseDouble(values[14].substring(1));
+						
+						ProviderDataObject a = new ProviderDataObject(values[0]+values[1], providerID, values[3], values[4]+values[5]+values[6], values[7], values[8], zip, values[10], discharges, ACC, ATP, AMP); 
+						System.out.println(a);
+						tree.put(a.getProviderZip(),a);
+						table.put(a.getProviderZip(),a);
+					}
+					
+					
+					
+				}
+				inputStream.close();
+				combine = new BSTHashServices(tree, table);
+				
+			}	catch(FileNotFoundException e){
+				e.printStackTrace();
+			}
+		/*File inputWorkbook = new File(inputFile);
 		Workbook w;
 		try {
 			w = Workbook.getWorkbook(inputWorkbook);
@@ -81,7 +192,7 @@ public class ReadExcel {
 			return;
 		}
 
-		combine = new BSTHashServices(tree, table);
+		combine = new BSTHashServices(tree, table);*/
 	}
 	/*
 	public static void main(String[] args) throws IOException {

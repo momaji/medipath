@@ -1,18 +1,20 @@
 package data_mangement;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
 public class ClientCode {
-	public static void main(String[] args){
+	public static void main(String[] args) throws IOException{
 		
-		new ReadExcel("medipath.xls");
+		ReadExcel test = new ReadExcel();
+		test.read();
 		
 		String originAddress = "940 virginia avenue";
 		String originZip = "46203";
 		
 		int[] prod = {57,57,292,207,39};
-		
+		System.out.println(((PriorityQueue) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(), 200)).poll());
 		ShortPath(57,originAddress,originZip);
 		
 		//this gets all the objects of a certain procedure number in a zip code range, 
