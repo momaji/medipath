@@ -1,21 +1,22 @@
 package data_mangement;
-
+//check if my github is woking
 // https://www.youtube.com/watch?v=65igZdK9Vd4 (code is in description)
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.NumberFormat;
 import java.util.Scanner;
 public class ReadExcel {
 
-	public ReadExcel(){
+	/*public ReadExcel(){
 		try {
 			read();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
+	}*/
 
 	private static final RedBlackBST<Integer, ProviderDataObject> tree = new RedBlackBST<Integer, ProviderDataObject>();
 	private static final SeperateChainingHash<Integer, ProviderDataObject> table = new SeperateChainingHash<Integer, ProviderDataObject>();
@@ -26,8 +27,8 @@ public class ReadExcel {
 		return Double.parseDouble((string).substring(1).replace(",", ""));
 	}
 
-	public void read() throws IOException {
-			File file = new File("medipath.csv");
+	public static void read() throws IOException {
+			File file = new File("medicare2.csv");
 			try{
 				Scanner inputStream = new Scanner(file);
 				String data = inputStream.nextLine();
@@ -38,6 +39,7 @@ public class ReadExcel {
 					//System.out.println(data);
 					
 					String[] values = data.split(",");
+					
 					
 					//System.out.print(values.length+"/");
 					/*System.out.println(values[0] + "/");
@@ -56,8 +58,14 @@ public class ReadExcel {
 					
 					
 					//6 8 9 10 11 need conversion int int double double double
-					System.out.println(values.length);
+					//System.out.println(values.length);
 					if (values.length == 12){
+						String procedure;
+						char quote = '"';
+						procedure = values[0]; 
+						if (values[0].charAt(0) == quote)
+							procedure = values[0].substring(1);
+						
 						int zip = Integer.parseInt(values[6]);
 						int discharges = Integer.parseInt(values[8]);
 						int providerID = Integer.parseInt(values[1]);
@@ -72,14 +80,20 @@ public class ReadExcel {
 						double ATP = Double.parseDouble(values[10].substring(1));
 						double AMP = Double.parseDouble(values[11].substring(1));
 						
-						ProviderDataObject a = new ProviderDataObject(values[0], providerID, values[2], values[3], values[4], values[5], zip, values[7], discharges, ACC, ATP, AMP); 
-						System.out.println(a);
+						ProviderDataObject a = new ProviderDataObject(procedure, providerID, values[2], values[3], values[4], values[5], zip, values[7], discharges, ACC, ATP, AMP); 
+						//System.out.println(a);
 						tree.put(a.getProviderZip(),a);
 						table.put(a.getProviderZip(),a);
 					}
 					
 					if (values.length == 13){
-						System.out.println(v);
+						String procedure;
+						char quote = '"';
+						procedure = values[0]; 
+						if (values[0].charAt(0) == quote)
+							procedure = values[0].substring(1);
+						
+						//System.out.println(v);
 						int zip = Integer.parseInt(values[7]);
 						int discharges = Integer.parseInt(values[9]);
 						int providerID = Integer.parseInt(values[1]);
@@ -93,13 +107,20 @@ public class ReadExcel {
 						double ATP = Double.parseDouble(values[11].substring(1));
 						double AMP = Double.parseDouble(values[12].substring(1));
 						
-						ProviderDataObject a = new ProviderDataObject(values[0], providerID, values[2], values[3]+values[4], values[4], values[5], zip, values[7], discharges, ACC, ATP, AMP); 
-						System.out.println(a);
+						ProviderDataObject a = new ProviderDataObject(procedure, providerID, values[2], values[3]+values[4], values[4], values[5], zip, values[7], discharges, ACC, ATP, AMP); 
+						//System.out.println(a);
 						tree.put(a.getProviderZip(),a);
 						table.put(a.getProviderZip(),a);
 					}
 					
-					if (values.length == 14){
+					if (values.length == 14){	
+						String procedure;
+						char quote = '"';
+						procedure = values[0]; 
+						if (values[0].charAt(0) == quote)
+							procedure = values[0].substring(1);
+						
+						
 						int zip = Integer.parseInt(values[8]);
 						int discharges = Integer.parseInt(values[10]);
 						int providerID = Integer.parseInt(values[1]);
@@ -113,16 +134,25 @@ public class ReadExcel {
 						double ATP = Double.parseDouble(values[12].substring(1));
 						double AMP = Double.parseDouble(values[13].substring(1));
 						
-						ProviderDataObject a = new ProviderDataObject(values[0], providerID, values[2], values[3]+values[4]+values[5], values[4], values[5], zip, values[7], discharges, ACC, ATP, AMP); 
-						System.out.println(a);
+						ProviderDataObject a = new ProviderDataObject(procedure, providerID, values[2], values[3]+values[4]+values[5], values[7], values[7], zip, values[9], discharges, ACC, ATP, AMP); 
+						//System.out.println(a);
 						tree.put(a.getProviderZip(),a);
 						table.put(a.getProviderZip(),a);
 					}
+						
+						
+					
 					
 					if (values.length == 15){
+						String procedure;
+						char quote = '"';
+						procedure = values[0]; 
+						if (values[0].charAt(0) == quote)
+							procedure = values[0].substring(1);
+						
 						int zip = Integer.parseInt(values[9]);
 						int discharges = Integer.parseInt(values[11]);
-						int providerID = Integer.parseInt(values[3]);
+						int providerID = Integer.parseInt(values[1]);
 						//System.out.println("checked13");
 						//getting rid of commas and dollar sign for 9,10,11 and converting to type int
 						//double ACC = Double.parseDouble((cell9.getContents()).substring(1).replace(",", ""));
@@ -133,19 +163,21 @@ public class ReadExcel {
 						double ATP = Double.parseDouble(values[13].substring(1));
 						double AMP = Double.parseDouble(values[14].substring(1));
 						
-						ProviderDataObject a = new ProviderDataObject(values[0]+values[1], providerID, values[3], values[4]+values[5]+values[6], values[7], values[8], zip, values[10], discharges, ACC, ATP, AMP); 
-						System.out.println(a);
+						ProviderDataObject a = new ProviderDataObject(procedure, providerID, values[2], values[3]+values[4]+values[5]+values[6], values[7], values[8], zip, values[10], discharges, ACC, ATP, AMP); 
+						//System.out.println(a);
 						tree.put(a.getProviderZip(),a);
 						table.put(a.getProviderZip(),a);
 					}
 					
 					
-					
+					//System.out.println(v);
 				}
+				
 				inputStream.close();
 				combine = new BSTHashServices(tree, table);
 				
-			}	catch(FileNotFoundException e){
+			}	
+			catch(FileNotFoundException e){
 				e.printStackTrace();
 			}
 		/*File inputWorkbook = new File(inputFile);

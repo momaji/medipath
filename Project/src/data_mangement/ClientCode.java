@@ -14,7 +14,7 @@ public class ClientCode {
 		String originZip = "46203";
 		
 		int[] prod = {57,57,292,207,39};
-		System.out.println(((PriorityQueue) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(), 200)).poll());
+		//System.out.println(((PriorityQueue) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(), 200)).poll());
 		ShortPath(57,originAddress,originZip);
 		
 		//this gets all the objects of a certain procedure number in a zip code range, 
