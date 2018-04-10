@@ -51,4 +51,19 @@ public class BSTHashServices {
 		return (Iterable<Object>) hospitals;
 		
 	}
+	
+	/*public Iterable<Object> getAll(Iterable<Object> allkeys) {
+		PriorityQueue<Object> hospitals = new PriorityQueue<Object>();
+		Iterator<Object> itr = allkeys.iterator();
+		while (itr.hasNext()) {
+			Iterator<Object> m = (this.table.get((Integer) itr.next())).iterator();
+			while(m.hasNext()) {
+				ProviderDataObject that = (ProviderDataObject) m.next();
+					hospitals.add(that);	
+				}
+			}
+		
+		return (Iterable<Object>) hospitals;
+		
+	}*/
 }
