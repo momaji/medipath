@@ -4,6 +4,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
+/**
+ * The functions needed for the UI to interact with the rest of the java program 
+ * @author Eoin Lynagh
+ *
+ */
 public class ClientCode {
 	public static void main(String[] args) throws IOException{
 		
