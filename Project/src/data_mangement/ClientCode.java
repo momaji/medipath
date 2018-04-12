@@ -6,10 +6,15 @@ import java.util.PriorityQueue;
 
 /**
  * The functions needed for the UI to interact with the rest of the java program 
- * @author Eoin Lynagh
+ * @author Eoin Lynagh, Alex Kingsland
  *
  */
 public class ClientCode {
+	/**
+	 * This main is for testing
+	 * @param args
+	 * @throws IOException
+	 */
 	public static void main(String[] args) throws IOException{
 		
 		ReadExcel test = new ReadExcel();
@@ -35,7 +40,12 @@ public class ClientCode {
 		//and sets the distance from the user for all objects matching the described conditions.
 //<<<<<<< HEAD		
 	}
-	
+	/**
+	 * Prints out a given path from a generated array list
+	 * @param path the path that you want to print out
+	 * @param locations a list of objects that the path connects
+	 * @param start the index of the first object in your path in your arraylist
+	 */
 	public static void display(WeightedEdge[] path, ArrayList<ProviderDataObject> locations, int start) {
 		int trace = start;
 		for(int i = 0; i < locations.size()-1; i++) {
@@ -44,7 +54,12 @@ public class ClientCode {
 		}
 		System.out.println(locations.get(trace));
 	}
-	
+	/**|
+	 * Sets the distances for the closest cheapest hospitals that perform a procedure (or procedures) from an address and zip code provided by the user
+	 * @param prod the procedure number that you are looking for a hospital to perform
+	 * @param address the users address
+	 * @param zip the zip code of the user
+	 */
 	public static void ShortPath(int[] prod, String address, String zip) {
 		int[] keys = new int[2];
 		getKeys(keys, Integer.parseInt(zip));
@@ -74,7 +89,13 @@ public class ClientCode {
 		MinSpanningPath path = new MinSpanningPath(map, index);
 		display(path.getPath(), locations, index);	
 	}
-	
+	/**
+	 * returns the closest cheapest hospital to the user that does a particular procedure
+	 * @param prod the procedure number
+	 * @param address the address of the user
+	 * @param zip the zip code
+	 * @return the closest cheapest hospital 
+	 */
 	public static String ShortPath(int prod, String address, String zip) {
 		int[] keys = new int[2];
 		String out = new String();
@@ -92,7 +113,11 @@ public class ClientCode {
 		System.out.println(out);
 		return out;
 	}
-	
+	/**
+	 * Puts the user zip codes in a range to allow the program to search zip codes in a circular range
+	 * @param keys an array that will be filled with zip codes representing a reasonable range around the client
+	 * @param zip the client zip code
+	 */
 	public static void getKeys(int[] keys, int zip) {
 		if(zip - 400 < 1040) {
 			keys[0] = 1040;
