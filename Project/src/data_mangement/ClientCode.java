@@ -25,20 +25,7 @@ public class ClientCode {
 		
 		int[] prod = {57,57,292,207,39};
 		
-		/*PriorityQueue hospitials = (PriorityQueue) ReadExcel.combine.getHospitalsInRange(ReadExcel.combine.tree.keys(), 39 );
-		while(!hospitials.isEmpty()){
-			System.out.println(hospitials.poll());
-		}*/
 		
-		//PriorityQueue hospitials = (PriorityQueue) ReadExcel.combine.getAll(ReadExcel.combine.tree.keys());
-		//int i =0;
-		//System.out.println(hospitials.size());
-				
-		//ShortPath(57,originAddress,originZip);
-		
-		//this gets all the objects of a certain procedure number in a zip code range, 
-		//and sets the distance from the user for all objects matching the described conditions.
-//<<<<<<< HEAD		
 	}
 	/**
 	 * Prints out a given path from a generated array list

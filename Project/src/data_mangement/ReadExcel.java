@@ -42,30 +42,13 @@ public class ReadExcel {
 				while(inputStream.hasNext()){
 					v++;
 					data = inputStream.nextLine();
-					//System.out.println(data);
 					
 					String[] values = data.split(",");
-					
-					
-					//System.out.print(values.length+"/");
-					/*System.out.println(values[0] + "/");
-					System.out.println(values[1] + "/");
-					System.out.println(values[2] + "/");
-					System.out.println(values[3] + "/");
-					System.out.println(values[4] + "/");
-					System.out.println(values[5] + "/");*/
-					//System.out.print(values[6]);
-					/*System.out.println(values[7] + "/");
-					System.out.println(values[8] + "/");
-					System.out.println(values[9] + "/");
-					System.out.println(values[10] + "/");
-					System.out.println(values[11] + "/");*/
-					//System.out.println();
+				
 					
 					//All of the if statements are needed because our csv file had lines with varying 
 					//amounts of comma's due to commas being in certain names for cities and procedures
 					
-					//System.out.println(values.length);
 					if (values.length == 12){
 						String procedure;
 						char quote = '"';
@@ -83,7 +66,7 @@ public class ReadExcel {
 						double AMP = Double.parseDouble(values[11].substring(1));
 						
 						ProviderDataObject a = new ProviderDataObject(procedure, providerID, values[2], values[3], values[4], values[5], zip, values[7], discharges, ACC, ATP, AMP); 
-						//System.out.println(a);
+			
 						tree.put(a.getProviderZip(),a);
 						table.put(a.getProviderZip(),a);
 					}
@@ -95,7 +78,7 @@ public class ReadExcel {
 						if (values[0].charAt(0) == quote)
 							procedure = values[0].substring(1);
 						
-						//System.out.println(v);
+		
 						int zip = Integer.parseInt(values[7]);
 						int discharges = Integer.parseInt(values[9]);
 						int providerID = Integer.parseInt(values[1]);
@@ -105,7 +88,7 @@ public class ReadExcel {
 						double AMP = Double.parseDouble(values[12].substring(1));
 						
 						ProviderDataObject a = new ProviderDataObject(procedure, providerID, values[2], values[3]+values[4], values[4], values[5], zip, values[7], discharges, ACC, ATP, AMP); 
-						//System.out.println(a);
+
 						tree.put(a.getProviderZip(),a);
 						table.put(a.getProviderZip(),a);
 					}
@@ -127,7 +110,7 @@ public class ReadExcel {
 						double AMP = Double.parseDouble(values[13].substring(1));
 						
 						ProviderDataObject a = new ProviderDataObject(procedure, providerID, values[2], values[3]+values[4]+values[5], values[7], values[7], zip, values[9], discharges, ACC, ATP, AMP); 
-						//System.out.println(a);
+
 						tree.put(a.getProviderZip(),a);
 						table.put(a.getProviderZip(),a);
 					}
@@ -151,13 +134,11 @@ public class ReadExcel {
 						double AMP = Double.parseDouble(values[14].substring(1));
 						
 						ProviderDataObject a = new ProviderDataObject(procedure, providerID, values[2], values[3]+values[4]+values[5]+values[6], values[7], values[8], zip, values[10], discharges, ACC, ATP, AMP); 
-						//System.out.println(a);
 						tree.put(a.getProviderZip(),a);
 						table.put(a.getProviderZip(),a);
 					}
 					
 					
-					//System.out.println(v);
 				}
 				
 				inputStream.close();
